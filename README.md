@@ -1,5 +1,6 @@
 # web2023
-수업시간 예제
+
+나의 블로그 : https://qqw2.tistory.com/manage/posts/
 
 # HTML
 블록구조/인라인 구조
