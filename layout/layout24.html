@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 - float 방식</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            height: 1080px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #B3E5FC;
+            float: left;
+        }
+        #header1 {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            float: left;
+        }
+        #banner {
+            width: 1200px;
+            height: 480px;
+            background-color: #29B6F6;
+        }
+        #cont1 {
+            width: 400px;
+            height: 300px;
+            background-color: #66BB6A;
+            float: left;
+        }
+        #cont2 {
+            width: 400px;
+            height: 300px;
+            background-color: #4CAF50;
+            float: left;
+        }
+        #cont3 {
+            width: 400px;
+            height: 300px;
+            background-color: #81C784;
+            float: left;
+        }
+        #f1 {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+        #f2 {
+            width: 800px;
+            height: 100px;
+            background-color: black;
+            float: left;
+        }
+        #f3 {
+            width: 200px;
+            height: 100px;
+            background-color: wheat;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="header1"></div>
+        </div>
+        <div id="banner"></div>
+        <div id="contents">
+            <div id="cont1"></div>
+            <div id="cont2"></div>
+            <div id="cont3"></div>
+        </div>
+        <div id="footer">
+            <div id="f1"></div>
+            <div id="f2"></div>
+            <div id="f3"></div>
+        </div>
+    </div>
+</body>
+</html>
