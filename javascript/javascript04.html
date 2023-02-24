@@ -7,6 +7,7 @@
     <title>javascript : 데이터 제어하기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/javascript192x192.png">
@@ -49,18 +50,262 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. if문</a></li>
-                    <li><a href="#">01. if문 생략</a></li>
-                    <li><a href="#">01. 다중 if</a></li>
-                    <li><a href="#">01. 중첩 if</a></li>
-                    <li><a href="#">01. 삼항 연산자</a></li>
-                    <li><a href="#">01. switch문</a></li>
-                    <li><a href="#">01. while문</a></li>
-                    <li><a href="#">01. do while문</a></li>
-                    <li><a href="#">01. for문</a></li>
-                    <li><a href="#">01. 중첩 for문</a></li>
-                    <li><a href="#">01. break문</a></li>
-                    <li><a href="#">01. continue문</a></li>
+                    <li><a href="#">02. if문 생략</a></li>
+                    <li><a href="#">03. 삼항 연산자</a></li>
+                    <li><a href="#">04. 다중 if</a></li>
+                    <li><a href="#">05. 중첩 fi</a></li>
+
+                    <li><a href="#">06. switch문</a></li>
+                    <li><a href="#">07. while문</a></li>
+                    <li><a href="#">08. do while문</a></li>
+                    <li><a href="#">09. for문</a></li>
+                    <li><a href="#">10. 중첩 for문</a></li>
+                    <li><a href="#">11. break문</a></li>
+                    <li><a href="#">12. continue문</a></li>
                 </ul>
+            </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. if문</h3>
+                    <p>if다음 소괄호에 조건을 표기하여 결괏값에 따라 답이 나오는 명령입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const x = prompt("당신이 좋아하는 숫자는 무엇입니까?");
+
+    if(x == 100){
+        document.write("당신은 100점짜리 인간이네요!");
+    } else if(x == 99) {
+        document.write("당신은 99점짜리 인간이네요!");
+    } else if(x == 98) {
+        document.write("당신은 98점짜리 인간이네요!");
+    } else if(x == 97) {
+        document.write("당신은 97점짜리 인간이네요!");
+    } else {
+        document.write("좀 더 높게 쓰시는게 어떨까요?");
+    }   
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                질문에 답을 입력시<br>
+                                100 - 당신은 100점짜리 인간이네요!<br>
+                                99 -  당신은 100점짜리 인간이네요!<br>
+                                98 -  당신은 100점짜리 인간이네요!<br>
+                                97 -  당신은 100점짜리 인간이네요!<br>
+                                그 외 숫자 -  좀 더 높게 쓰시는게 어떨까요?<br>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>01-2. if문</h3>
+                    <p>조건식에서 데이터에 따라서 어떤 결괏값이 나오는지 정리한 기본적인 정보입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    if(조건식){
+        document.write("실행되었습니다.(true)");
+    } else {
+        document.write("실행되었습니다.(false)");
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                false : 0, null, undefined, false, ""(빈문자열) <br>
+                                true : 1, 2, "0", "1", "ABC", [], {}, true  
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>02. if문 생략</h3>
+                    <p>if문을 좀 더 효율적으로 사용하기 위해 생략하는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
+    // if(num){
+    //     document.write("실행되었습니다.(true)");
+    // } else {
+    //     document.write("실행되었습니다.(true)");
+    // }
+    if(num) document.write("실행되었습니다.(true)");
+    else document.write("실행되었습니다.(false)");
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>03. 삼항(조건) 연산자</h3>
+                    <p>if, else문을 사용하지 않고도 조건에 따라 값을 반환할 수 있는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    // const num = 100;                // 주석 처리한 기존의 삼항 연산자는 사용되지 않는 코드까지 사용하게 된다는 단점이 있었다. 
+    // if(num == 100){                 
+    //     document.write("true");
+    // } else {
+    //     document,write("false");
+    // }
+
+    (num == 100) ? document.write("true") : document.write("false");
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                true
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample04 -->
+
+                <div id="sample03" class="sample">
+                    <h3>04. 다중 if</h3>
+                    <p>if문을 여러번 사용하는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
+                                //숫자인지,문자인지 ,함수인지,객체인지 == 보다 확실한 정보를 확인하기 위해 ===를 사용한다.
+    if(num == 90){
+        document.write("실행되었습니다(num == 90)");
+    } else if(num == 100) {
+        document.write("실행되었습니다(num ==100)");
+    } else if(num == 110) {
+        document.write("실행되었습니다(num ==110)");
+    } else if(num == 120) {
+        document.write("실행되었습니다(num ==120)");
+    } else {
+        document.write("실행되었습니다");
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.(num == 100)
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample05 -->
+
+                <div id="sample03" class="sample">
+                    <h3>05. 중첩 if문</h3>
+                    <p>if문에 if문을 중첩 시켜 사용하는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
+
+    if(num == 100){
+        document.write("실행되었습니다.(1)");
+        if(num == 100){
+            document.write("실행되었습니다.(2)");
+            if(num == 100){
+                document.write("실행되었습니다.(3)");
+            }
+        }
+    } else {
+        document.write("실행되었습니다.(4)")
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample05 -->
+
+                <div id="sample03" class="sample">
+                    <h3>연습</h3>
+                    <p>지금까지의 내용들 정리</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    for(let i=1; i&lt;=100; i++){      // 1부터 100까지
+        document.write(i);
+    }
+    document.write("&lt;br&gt;");       // 줄바꿈 표시
+
+    const arr = [1,2,3,4,5,6,7,8,9]
+
+    for(let i=0; i&lt;arr.length; i++){    // 배열 안에 있는 데이터 불러오기
+        document.write(arr[i]);
+    }
+
+    document.write("&lt;br&gt;");        // 줄바꿈 표시
+
+    for(let i=1; i&lt;arr.length; i +=2){      // 배열 안에 있는 데이터를 짝수로 불러오기
+        document.write(arr[i]);
+    }
+
+    document.write(" &lt;br>");          // 줄바꿈 표시 
+
+    for(let i=0; i&lt;arr.length; i +=2){  // 배열 안에 있는 데이터를 홀수로 불러오기
+        document.write(arr[i]);
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample05 -->
+
+                <div id="sample03" class="sample">
+                    <h3>for문</h3>
+                    <p>for문과 if..else문을 사용하여 배열 안에 있는 데이터에서 짝수는 빨간색으로 출력 그 외는 파란색으로 출력된다</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    for(let i=1; i&lt;=arr.length; i++){
+     if(i % 2 ==0){
+         document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;");
+     } else {
+         document.write(`&lt;span style='color:blue'&gt;${i}&lt;/span&gt;`);
+     }
+ }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <span style="color:blue">1</span>
+                                <span style="color:red">2</span>
+                                <span style="color:blue">3</span>
+                                <span style="color:red">4</span>
+                                <span style="color:blue">5</span>
+                                <span style="color:red">6</span>
+                                <span style="color:blue">7</span>
+                                <span style="color:red">8</span>
+                                <span style="color:blue">9</span>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample05 -->
+                
             </div>
         </div>
     </main>
@@ -70,8 +315,35 @@
         <a href="mailto:kshkmn0929@naver.com">kshkmn0929@naver.com</a>
     </footer>
     <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
     <script>
+        // 테이블 10칸짜리 만들기
+
+        // let table = "<table border='1'>";
+        
+        // for(let j=0; j<5; j++){
+        //     table +="<tr>";
+        //     for(let i=0; i<5; i++){
+        //         table +="<td>"+i+"</td>";
+        //         }
+        //         table +="</tr>";
+        // } table +="</table>"
+        // document.write(table)
+        
+        // table += "</table>";
+        
+        // document.write(table);
+
+        // // 1부터 25까지 출력
+        // let num = 0;
+        // for(let i=1; i<=25; i++){
+        //     document.write(i);
+        //     num++;
+        // }
+        // document.write("<br>");
+        // document.write(num);          
     </script>
 </body>
 </html>
