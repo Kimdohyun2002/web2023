@@ -343,7 +343,53 @@ const x = prompt("당신이 좋아하는 숫자는 무엇입니까?");
         //     num++;
         // }
         // document.write("<br>");
-        // document.write(num);          
+        // document.write(num);      
+       
+        // 10칸짜리 테이블과 1부터 25까지 출력을 이용하여 테이블 만들기
+        
+        // let table = "<table border=1>"
+        // for(let i=1; i<=10; i++){
+        //     table +="<tr>"
+        //     for(let j=1; j<=10; j++){
+        //         table +="<td>"+j+"</td>"
+        //     }   table +="</tr>"
+        // }   table += "</table>"
+        // document.write(table)
+
+        // let table = "<table border=1>"
+
+        // for(let i=1; i<=10; i++){
+        //     table +="<tr>"
+        //     num = 0;
+
+        //     for(let a=1; a<=100; a++){
+        //         document.write(a);
+        //         num++;
+        //     }
+        //     for(let j=1; j<=10; j++){
+        //         table +="<td>"+num+"</td>"
+        //     }   table +="</tr>"
+        // }   table += "</table>"
+        // document.write(table)
+        
+        let table = "<table border=1>"
+        let num = 1;  
+            for(let i=1; i<=5; i++){
+                table +="<tr>"
+                for(let j=1; j<=5; j++){
+                    if(num % 2==0){
+                        table +="<td style='color:blue'>"+num+"</td>"
+                    }
+                    if(num % 2==1){
+                        table +="<td style='color:red'>"+num+"</td>"
+                    }
+                    
+                    num++;
+                }   
+                table +="</tr>"
+            }   
+            table += "</table>"
+        document.write(table)
     </script>
 </body>
 </html>
