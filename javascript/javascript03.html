@@ -49,14 +49,14 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. 선언적 함수</a></li>
-                    <li><a href="#">01. 익명 함수</a></li>
-                    <li><a href="#">01. 매개변수 함수</a></li>
-                    <li><a href="#">01. 리턴값 함수</a></li>
+                    <li><a href="#">02. 익명 함수</a></li>
+                    <li><a href="#">03. 매개변수 함수</a></li>
+                    <li><a href="#">04. 리턴값 함수</a></li>
+                    <li><a href="#">05. 화살표 함수 : 선언적 함수</a></li>
+                    <li><a href="#">06. 화살표 함수 : 익명 함수</a></li>
+                    <li><a href="#">07. 화살표 함수 : 매개변수 함수</a></li>
+                    <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
 
-                    <li><a href="#">01. 화살표 함수 : 선언적 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 익명 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 매개변수 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 리턴값 함수</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
@@ -93,6 +93,210 @@
     <!-- //footer -->
 
     <script>
+        // 변수, 상수, 배열, 객체 : 데이터 저장
+        // 함수 : 데이터 실행
+        
+        // 선언적 함수
+        // {
+        //     function func(){
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+
+        // // 익명 함수
+        // {
+        //     const func = function(){
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+
+        // // 매개변수 함수
+        // {
+
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.<br>");
+        // }
+
+        // // 04.리턴값(결과/끝) 함수
+        // // 
+        // {
+        //     function func(){
+        //         const str = "실행되었습니다.";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+        // document.write("<br><br>")
+
+        // // 05. 
+        // {
+        //     func = () => {
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+
+        // {
+        //     const func = () => {
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+        // {
+        //     func = (str) => {
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.<br>");
+        // }
+        // {
+        //     func = () => {
+        //         const str = "실행되었습니다.<br>";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+        // 10~88까지 짝수만 출력
+
+        // for(let i=10; i<=88; i +=2){
+        //     document.write(i)
+        // }
+        // document.write("<br><br>")
+
+        // // 구구단
+
+        // for(let i=2; i<=9; i++){
+        //     document.write(i+"단"+"<br>")
+        //     for(let j=1; j<=9; j++){
+        //         document.write(i+"*"+j+"="+i*j+"<br>")
+        //     }
+        // }
+        // document.write("<br><br>")
+
+        // // 테이블 100칸
+        
+        // let table = "<table border=1>"
+        // let num = 1;
+        //     for(let i=1; i<=10; i++){
+        //         table += "<tr>"
+        //         for(let j=1; j<=10; j++){
+        //             table += "<td>"+num+"</td>"
+        //             num++;
+        //         }
+        //         table +="</tr>"
+        //     }
+        //     table += "</table>"
+        // document.write(table);
+        
+        // // 함수 4가지 유형
+        // {
+        //     function func(){
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+
+        // {
+        //     const func = function(){
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.<br>")
+        // }
+        // {
+        //     function func(){
+        //         const func = "실행되었습니다."
+        //         return func;
+        //     }
+        //     document.write(func())
+        // }
+        //     document.write("<br><br>")
+        // {
+        //     func = () => {
+        //         document.write("실행되었습니다.<br>")
+        //     }
+        //     func();
+        // }
+        // {
+        //     const func = () => {
+        //         document.write("실행되었습니다.<br>")
+        //     }
+        //     func();
+        // }
+        // {
+        //     func = (str) => {
+        //         document.write(str)
+        //     }
+        //     func("실행되었습니다.<br>");
+        // }
+        // {
+        //     func = () => {
+        //         const str = "실행되었습니다."
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+        {
+            function func(){
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+        {
+            const func = function(){
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("실행되었습니다.<br>");
+        }
+        {
+            function func(){
+                const func = "실행되었습니다.";
+                return func;
+            }
+            document.write(func());
+        }
+        document.write("<br>")
+        {
+            func = () => {
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+        {
+            const func = () => {
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+        {
+            func = (str) => {
+                document.write(str)
+            }
+            func("실행되었습니다.<br>");
+        }
+        {
+            func = () => {
+                const func = "실행되었습니다."
+                return func;
+            }
+            document.write(func());
+        }
     </script>
 </body>
 </html>
