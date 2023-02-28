@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃14 - flex 유형</title>
+    <title>레이아웃19 - flex 유형 - 반응형</title>
     <style>
         * {
-            margin: 0; 
+            margin: 0;
             padding: 0;
         }
         #header {
@@ -30,29 +30,35 @@
             height: 100px;
             background-color: #00897B;
         }
-        .container {
+        .class {
             width: 1200px;
             height: inherit;
-            margin: 0 auto;
             background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+        @media (max-width:1220px){
+            .class {
+                width: 96%;
+            }
+        }
+        @media (max-width:780px){
+            .class {
+                width: 100%;
+            }
+        }
+        @media (max-width:480px){
+            .class {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <div class="container"></div>
-        </header>
-        <nav id="nav">
-            <div class="container"></div>
-        </nav>
-        <main id="main">
-            <div class="container"></div>
-        </main>
-        <footer id="footer">
-            <div class="container"></div>
-        </footer>
+        <header id="header"><div class="class"></div></header>
+        <nav id="nav"><div class="class"></div></nav>
+        <main id="main"><div class="class"></div></main>
+        <footer id="footer"><div class="class"></div></footer>
     </div>
-
 </body>
 </html>
