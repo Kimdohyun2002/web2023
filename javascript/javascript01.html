@@ -180,8 +180,48 @@
                 
                 <!-- //sample03 -->
 
+                <div id="sample18" class="sample">
+                    <h3>04. 변수 : 지역 변수 + 전역 변수(스코프)</h3>
+                    <p>변수는 함수 블록{}을 기준으로 변수의 선언 위치에 따라 '전역 변수'와 '지역 변수'로 나누어집니다.<br>
+                    <span style=color:blue>'전역 변수'는 함수 블록{} 밖이나 안에서 자유롭게 사용 가능하지만 '지역 변수'는 함수 블록{} 내에서만 사용할 수 있습니다.</span></p>
+                    <div class="script">
+<pre><code>{
+    function func(){
+        x = 300;            //앞에 let을 붙이지 않으면 전역변수
+        let y = 400;        //지역 변수
+        z = "javascript";   //전역 변수
+
+        function fux(){}
+
+        console.log("함수안"+x);-
+        console.log("함수안"+y);
+        console.log("함수안"+z);
+    }
+    func();
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                함수안300<br>
+                                함수안400<br>
+                                함수안javascript<br>
+                                300<br>
+                                200<br>
+                                javascript<br>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample18 -->
+
                 <div id="sample04" class="sample">
-                    <h3>04. 상수 : 데이터 저장 + 데이터 변경(x)</h3>
+                    <h3>05. 상수 : 데이터 저장 + 데이터 변경(x)</h3>
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능 합니다. 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정 할 수도 없습니다.</p>
                     <div class="script">
 <pre><code>{
@@ -209,7 +249,7 @@
                 <!-- //sample04 -->
 
                 <div id="sample05" class="sample">
-                    <h3>05. 배열 : 데이터 저장(여러개): 표현방법1</h3>
+                    <h3>06. 배열 : 데이터 저장(여러개): 표현방법1</h3>
                     <p>대괄호 안에 여러가지 데이터들을 저장할 수 있게 했다.</p>
                     <div class="script">
 <pre><code>{
@@ -238,7 +278,7 @@
                 <!-- //sample05 -->
 
                 <div id="sample06" class="sample">
-                    <h3>06. 배열 : 데이터 저장(여러개) : 표현방법2</h3>
+                    <h3>07. 배열 : 데이터 저장(여러개) : 표현방법2</h3>
                     <p>하나의 괄호 안에 다중의 데이터를 저장했다.</p>
                     <div class="script">
 <pre><code>{
@@ -264,7 +304,7 @@
                 <!-- //sample06 -->
 
                 <div id="sample07" class="sample">
-                    <h3>07. 배열 : 데이터 저장(여러개) : 표현방법3</h3>
+                    <h3>08. 배열 : 데이터 저장(여러개) : 표현방법3</h3>
                     <p>대괄호 안에 데이터를 보다 간단하게 저장했다.</p>
                     <div class="script">
 <pre><code>{
@@ -293,7 +333,7 @@
                 <!-- //sample07 -->
 
                 <div id="sample08" class="sample">
-                    <h3>08. 배열 : 데이터 저장(여러개) : 표현방법4</h3>
+                    <h3>09. 배열 : 데이터 저장(여러개) : 표현방법4</h3>
                     <p>대괄호 안에 데이터를 저장 함으로써 간단한 정리가 가능하게 되었다.</p>
                     <div class="script">
 <pre><code>{
@@ -319,7 +359,7 @@
                 <!-- //sample08 -->
 
                 <div id="sample09" class="sample">
-                    <h3>09. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
+                    <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
                     <p>객체는 '키(이름):값'의 쌍으로 이루어 있으며 이것을 속성이라고 합니다.</p>
                     <div class="script">
 <pre><code>{
@@ -348,7 +388,7 @@
                 <!-- //sample09 -->
 
                 <div id="sample10" class="sample">
-                    <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
+                    <h3>11. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
                     <p>객체의 속성 값을 저장하는 또 다른 방법이다.</p>
                     <div class="script">
 <pre><code>{
@@ -377,7 +417,7 @@
                 <!-- //sample10 -->
 
                 <div id="sample11" class="sample">
-                    <h3>11. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
+                    <h3>12. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
                     <p>중괄호를 이용하여 객체의 속성 값을 더 쉽게 저장했다.</p>
                     <div class="script">
 <pre><code>{
@@ -406,7 +446,7 @@
                 <!-- //sample11 -->
 
                 <div id="sample12" class="sample">
-                    <h3>12. 객체 : 데이터 저장(키와 값) : 표현방법4</h3>
+                    <h3>13. 객체 : 데이터 저장(키와 값) : 표현방법4</h3>
                     <p>간략하게 객체의 속성 값을 중괄호에 저장할 수 있게 되었다. </p>
                     <div class="script">
 <pre><code>{
@@ -432,7 +472,7 @@
                 <!-- //sample12 -->
                         
                 <div id="sample13" class="sample">
-                    <h3>13. 연산자</h3>
+                    <h3>14. 연산자</h3>
                     <p></p>
                     <div class="script">
 <pre><code>{
@@ -469,7 +509,7 @@
                 <!-- //sample13 -->    
 
                 <div id="sample14" class="sample">
-                    <h3>14. 객체 : 데이터 저장(키와값): 표현방법5</h3>
+                    <h3>15. 객체 : 데이터 저장(키와값): 표현방법5</h3>
                     <p>배열 안에 객체가 있는 방식</p>
                     <div class="script">
 <pre><code>{
@@ -498,7 +538,7 @@
                 <!-- //sample14 -->
 
                 <div id="sample15" class="sample">
-                    <h3>15. 객체 : 데이터 저장(키와값): 표현방법6</h3>
+                    <h3>16. 객체 : 데이터 저장(키와값): 표현방법6</h3>
                     <p>객체 안에 배열이 들어가 있는 방식</p>
                     <div class="script">
 <pre><code>{
@@ -535,7 +575,7 @@
                 <!-- //sample15 -->
 
                 <div id="sample16" class="sample">
-                    <h3>16. 객체 : 데이터 저장(키와값): 표현방법7</h3>
+                    <h3>17. 객체 : 데이터 저장(키와값): 표현방법7</h3>
                     <p>키 값에 변수를 저장함</p>
                     <div class="script">
 <pre><code>{
@@ -565,7 +605,7 @@
                 <!-- //sample16 -->
 
                 <div id="sample17" class="sample">
-                    <h3>17. 객체 : 데이터 저장(키와값): 표현방법8</h3>
+                    <h3>18. 객체 : 데이터 저장(키와값): 표현방법8</h3>
                     <p>객체 안에는 실행문이 들어갈 수 있다.</p>
                     <div class="script">
 <pre><code>{
@@ -607,53 +647,7 @@
                 <!-- //sample17 -->
 
                 <div id="sample18" class="sample">
-                    <h3>18. 예제</h3>
-                    <p>함수에서 변수를 함께 실행하는 방법입니다.</p>
-                    <div class="script">
-<pre><code>{
-    const obj = {
-        a: 100,
-        b: [200, 300],
-        c: "javscript",
-        d: function(){
-            console.log("javscript가 실행되었습니다.");
-        },
-        e: function(){
-            console.log(obj.c + "가 실행되었습니다.");
-        },
-        f: function(){
-            console.log(this.c + "가 실행되었습니다.");
-        }
-    }
-    console.log(obj.a);
-    console.log(obj.b[0]);
-    console.log(obj.b[1]);
-    console.log(obj.c);
-    obj.d();
-    obj.e();
-    obj.f();
-}
-</code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                100</br>
-                                200</br>
-                                300</br>
-                                javascript</br>
-                                javascript가 실행되었습니다.</br>
-                                javascript가 실행되었습니다.</br>
-                                javascript가 실행되었습니다.</br>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-                <!-- //sample18 -->
-
-                <div id="sample18" class="sample">
-                    <h3>18. 예제</h3>
+                    <h3>19. 예제</h3>
                     <p>함수에서 변수를 함께 실행하는 방법입니다.</p>
                     <div class="script">
 <pre><code>{
@@ -700,8 +694,9 @@
                 <!-- //sample18 -->
                 
                 <div id="sample18" class="sample">
-                    <h3>19. 연산자(전치 , 후치)</h3>
-                    <p>전치 연산자는 변수의 값을 증가시키거나 감소시키고, 그 새로운 값을 반환합니다. 이를 통해 변수에 새로운 값을 대입하지 않아도 값이 변경됩니다. 전치 연산자는 변수 앞에 ++ 연산자를 사용하여 표시됩니다.<br>
+                    <h3>연산자(전치 , 후치)</h3>
+                    <p>추가 정리입니다.<br>
+                       전치 연산자는 변수의 값을 증가시키거나 감소시키고, 그 새로운 값을 반환합니다. 이를 통해 변수에 새로운 값을 대입하지 않아도 값이 변경됩니다. 전치 연산자는 변수 앞에 ++ 연산자를 사용하여 표시됩니다.<br>
                        후치 연산자는 변수의 값을 증가시키거나 감소시키고, 그 이전 값을 반환합니다. 후치 연산자는 변수 뒤에 ++ 연산자를 사용하여 표시됩니다.</p>
                     <div class="script">
 <pre><code>{
@@ -723,46 +718,6 @@
                                 2<br>
                                 3<br>
                                 4<br>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-                <!-- //sample18 -->
-
-                <div id="sample18" class="sample">
-                    <h3>20. 변수 : 지역 변수 + 전역 변수(스코프)</h3>
-                    <p>변수는 함수 블록{}을 기준으로 변수의 선언 위치에 따라 '전역 변수'와 '지역 변수'로 나누어집니다.<br>
-                    <span style=color:blue>'전역 변수'는 함수 블록{} 밖이나 안에서 자유롭게 사용 가능하지만 '지역 변수'는 함수 블록{} 내에서만 사용할 수 있습니다.</span></p>
-                    <div class="script">
-<pre><code>{
-    function func(){
-        x = 300;            //앞에 let을 붙이지 않으면 전역변수
-        let y = 400;        //지역 변수
-        z = "javascript";   //전역 변수
-
-        function fux(){}
-
-        console.log("함수안"+x);-
-        console.log("함수안"+y);
-        console.log("함수안"+z);
-    }
-    func();
-    console.log(x);
-    console.log(y);
-    console.log(z);
-}
-</code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                함수안300<br>
-                                함수안400<br>
-                                함수안javascript<br>
-                                300<br>
-                                200<br>
-                                javascript<br>
                             </div>
                         </details>
                     </div>
