@@ -6,7 +6,7 @@
     <meta name="author" content="webstoryboy">
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
     <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
-    <title>여다슬 | Class</title>
+    <title>김도현 | Class</title>
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
@@ -32,15 +32,15 @@
     <meta name="theme-color" content="#FFFFFF">
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="여다슬" />
+    <meta property="og:title" content="김도현" />
     <meta property="og:url" content="https://webstoryboy.co.kr/" />
     <meta property="og:image" content="http://dsy1943.dothome.co.kr" />
-    <meta property="og:site_name" content="여다슬" />
+    <meta property="og:site_name" content="김도현" />
     <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
     <!-- twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@webstoryboy" />
-    <meta name="twitter:title" content="여다슬" />
+    <meta name="twitter:title" content="김도현" />
     <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
     <meta property="twitter:image" content="http://dsy1943.dothome.co.kr" />
     <!-- 웹 폰트 -->
@@ -66,12 +66,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html" class="navbar-brand">YDS &lt;/doc&gt;</a>
+                <a href="../index.html" class="navbar-brand">KDH &lt;/doc&gt;</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
                 <ul class="nav navbar-nav">
-                    <li><a href="https://duektmf34.tistory.com/">Blog</a></li>
-                    <li><a href="https://github.com/YeoDaSeul4355/web2023">Github</a></li>
+                    <li><a href="https://qqw2.tistory.com/">Blog</a></li>
+                    <li><a href="https://github.com/Kimdohyun2002/web2023">Github</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,7 +79,7 @@
     <div class="bs-header bgs1" id="content">
         <div class="container">
             <h1>Class v1.0 &lt;/doc&gt;</h1>
-            <p><a href="https://duektmf34.tistory.com/" target="_blank">Yeo Da Seul</a></p>
+            <p><a href="https://qqw2.tistory.com/" target="_blank">qqw2.tistory.com</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
@@ -203,17 +203,82 @@ mysql> show databases;
 5 rows in set (0.00 sec)
 </code></pre>
                     <h4 id="intro4-3" class="page-header">데이터베이스 사용</h4>
-                    <div class="bs-callout bs-callout-info"></div>
-<pre><code class="language-js">
-
+                    <div class="bs-callout bs-callout-info">use 데이터베이스 이름;</div>
+<pre><code class="language-js">mysql> use sample01;
+Database changed
 </code></pre>
                     <h4 id="intro4-4" class="page-header">데이터베이스 삭제</h4>
+                    <div class="bs-callout bs-callout-info">drop database 데이터베이스 이름;</div>
+<pre><code class="language-js">mysql> drop database sample01;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+</code></pre>
+                </div>
+                <!-- //intro4 -->
+
+                <div class="bs-docs-section">
+                    <h3 id="intro5" class="page-header">테이블</h3>
+                    <h4 id="intro5-1" class="page-header">테이블 만들기</h4>
+                    <div class="bs-callout bs-callout-info">create table 테이블 이름;</div>
+<pre><code class="language-js">create table member (
+    myMemberID int(10) unsigned auto_increment,
+    youEmail varchar(40) NOT NULL,
+    youName varchar(20) NOT NULL,
+    youPass varchar(20) NOT NULL,
+    youBirth int(20) NOT NULL,
+    youAge int(5) NOT NULL,
+    regTime int(20) NOT NULL,
+    PRIMARY KEY (myMemberID)
+) charset=utf8;
+</code></pre>
+                    <h4 id="intro5-2" class="page-header">테이블 전체보기</h4>
+                    <div class="bs-callout bs-callout-info">show tables;</div>
+<pre><code class="language-js">mysql> show tables;
++--------------------+
+| Tables_in_sample01 |
++--------------------+
+| member             |
++--------------------+
+1 row in set (0.00 sec)
+</code></pre>
+                    <h4 id="intro5-3" class="page-header">테이블 보기</h4>
+                    <div class="bs-callout bs-callout-info">desc 테이블 이름;</div>
+<pre><code class="language-js">mysql> desc member;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youEmail   | varchar(40)      | NO   |     | NULL    |                |
+| youName    | varchar(20)      | NO   |     | NULL    |                |
+| youPass    | varchar(20)      | NO   |     | NULL    |                |
+| youBirth   | int(20)          | NO   |     | NULL    |                |
+| youAge     | int(5)           | NO   |     | NULL    |                |
+| regTime    | int(20)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+</code></pre>
+                    <h4 id="intro5-4" class="page-header">테이블 삭제</h4>
+                    <div class="bs-callout bs-callout-info">drop table 테이블 이름;</div>
+<pre><code class="language-js">mysql> drop table member;
+Query OK, 0 rows affected (0.01 sec)
+</code></pre>
+                    <h4 id="intro5-5" class="page-header">테이블 복사</h4>
                     <div class="bs-callout bs-callout-info"></div>
 <pre><code class="language-js">
 
 </code></pre>
                 </div>
-                <!-- //intro4 -->
+                <!-- //intro5 -->
             </div>
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print affix-top" role="complementary">
@@ -229,6 +294,15 @@ mysql> show databases;
                                 <li><a href="#intro4-4">데이터베이스 삭제</a></li>
                             </ul>
                         </li>
+                        <li><a href="#intro5">테이블</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro5-1">테이블 만들기</a></li>
+                                <li><a href="#intro5-2">테이블 전체보기</a></li>
+                                <li><a href="#intro5-3">테이블 보기</a></li>
+                                <li><a href="#intro5-4">테이블 삭제</a></li>
+                                <li><a href="#intro5-5">테이블 복사</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -240,7 +314,7 @@ mysql> show databases;
     <footer class="bs-footer" role="contentinfo">
         <div class="container">
             <ul class="footer-links muted">
-                <li><a href="https://duektmf34.tistory.com/">YDS</a></li>
+                <li><a href="https://qqw2.tistory.com/">KDH</a></li>
             </ul>
         </div>
     </footer>
