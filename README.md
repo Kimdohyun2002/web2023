@@ -10,7 +10,7 @@
 데이터 제어하기 : https://kimdohyun2002.github.io/web2023/javascript/javascript04.html   
    
 퀴즈 게임01 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect01.html  
-퀴즈 게임02 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect02.html
+퀴즈 게임02 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect02.html   
 퀴즈 게임03 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect03.html   
 
 # 사이트
