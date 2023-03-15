@@ -11,11 +11,14 @@
    
 퀴즈 게임01 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect01.html  
 퀴즈 게임02 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect02.html
-퀴즈 게임03 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect03.html
+퀴즈 게임03 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect03.html   
 
 # 사이트
 헤더 유형01 : https://kimdohyun2002.github.io/web2023/site/headerType/headerType01.html   
 이미지 유형01 : https://kimdohyun2002.github.io/web2023/site/imageType/imageType01.html   
+이미지/텍스트 유형01 : https://kimdohyun2002.github.io/web2023/site/imagetextType/imagetextType01.html   
 카드 유형01 : https://kimdohyun2002.github.io/web2023/site/cardType.html/cardType01.html   
 텍스트 유형01 : https://kimdohyun2002.github.io/web2023/site/textType/textType01.html   
 슬라이드 유형01 : https://kimdohyun2002.github.io/web2023/site/sliderType/sliderType01.html   
+
+#MySQL
