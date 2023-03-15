@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트05</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body >
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인하기(여러문제) 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>  
+            <li><a href="quizEffect04.html">4</a></li>         
+            <li class="active"><a href="quizEffect05.html">5</a></li>           
+            
+        </ul>
+    </header> 
+    <!-- //header -->
+
+
+        <main id="main">
+            <div class="quiz__wrap">
+                <!-- <div class="quiz">
+                    <div class="quize__header">
+                        <h2 class="quiz__title"></h2>
+                    </div>
+                    <div class="quize__main">
+                    <div class="quiz__question"></div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__choice">
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" class="select" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="4">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="quiz__answer">
+                        <button class="confirm">정답 확인하기</button>
+                    </div>
+                    <div class="quiz__desc"></div>
+                </div>
+                </div> -->     
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+
+    <footer id="footer">
+        <a href="mail:kshkmn0929@naver.com">kshkmn0929@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        // 문제 정보
+        const quizInfo = [
+            {
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070201",
+                infoQuestion: "flip-flop의 종류에 해당하지 않는 것은?",
+                infoChoice: {
+                    1: "R-S",
+                    2: "J-K",
+                    3: "D",
+                    4: "R"
+                },
+                infoAnswer: "4",
+                infoDesc: "R 플립플롭은 존재 하지 않습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070202",
+                infoQuestion: "보기의 도형과 관련 있는 사항은?<br><img style='width:300px' src='../assets/img/noname01.tmp'>",
+                infoChoice: {
+                    1: "OR 게이트",
+                    2: "버퍼(buffer)",
+                    3: "NAND 게이트",
+                    4: "인버터(Inverter)"
+                },
+                infoAnswer: "4",
+                infoDesc: "그림은 인버터(NOT)입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070203",
+                infoQuestion: "드모르간(De Morgan)의 정리에 의해 &#256; 를 바르게 변환시킨 것은?",
+                infoChoice: {
+                    1: "&#65; &#66;",
+                    2: "1000",
+                    3: "&#256;",
+                    4: "&#256;"
+                },
+                infoAnswer: "1",
+                infoDesc: "드모르간 정리는 위에 긴 막대를 쪼개고 안의 부호를 바꾸는 방식입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070204",
+                infoQuestion: "논리적 연산의 종류에 해당되지 않는 것은?",
+                infoChoice: {
+                    1: "AND",
+                    2: "OR",
+                    3: "Rotate",
+                    4: "ADD"
+                },
+                infoAnswer: "1",
+                infoDesc: "ADD는 덧셈을 의미하며 논리연산이 아닌 산술 연산 입니다.<br>산술적연산은 4가지입니다.<br>ADD - 덧셈 / SUB - 뺄셈 / MUL - 곱셈 / DIV - 나눗셈<br>그외에 산술적 shift 가 있는데 좌로 2shift x2를 의미하며,<br> 우로 2shift 는 1/2를 의미"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070205",
+                infoQuestion: "다음 블록화 레코드에서 블록화 인수는?",
+                infoChoice: {
+                    1: "1",
+                    2: "2",
+                    3: "3",
+                    4: "4"
+                },
+                infoAnswer: "1",
+                infoDesc: "블록화 인수(BF)는 IBG와 IBG 사이의 논리 레코드 갯수를 의미 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070207",
+                infoQuestion: "2진수 1100101을 8진수로 변환하면?",
+                infoChoice: {
+                    1: "101(8)",
+                    2: "105(8)",
+                    3: "142(8)",
+                    4: "145(8)"
+                },
+                infoAnswer: "1",
+                infoDesc: "8진수로 변환시 3자리씩 끊어서 읽어주면 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070208",
+                infoQuestion: "명령어의 주소(address) 부를 연산 주소(address)로 이용하는 주소지정방식은?",
+                infoChoice: {
+                    1: "상대 address 방식",
+                    2: "절대 address 방식",
+                    3: "간접 address 방식",
+                    4: "직접 address 방식"
+                },
+                infoAnswer: "4",
+                infoDesc: "주소를 바로 이용하므로 직접 주소 방식이 답이 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070209",
+                infoQuestion: "명령어 형식(instruction format)에서 첫 번째 바이트에 기억되는 것은?",
+                infoChoice: {
+                    1: "operand",
+                    2: "length",
+                    3: "question mark",
+                    4: "op code"
+                },
+                infoAnswer: "4",
+                infoDesc: "명령어는 명령어코드부(OP-CODE)와 명령어 주소부(OP-R)로 나누어 집니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070210",
+                infoQuestion: "원격지에 설치된 입/출력 장치를 무엇이라고 하는가?",
+                infoChoice: {
+                    1: "변복조장치",
+                    2: "스캐너",
+                    3: "단말장치",
+                    4: "X-Y 플로터"
+                },
+                infoAnswer: "3",
+                infoDesc: "단말기란 원격지에 설치된 입출력 장치를 말합니다..변복조기는 MODEM을 뜻합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070211",
+                infoQuestion: "입/출력장치와 중앙처리장치의 속도 차이로 인한 단점을 해결하는 장치는?",
+                infoChoice: {
+                    1: "채널장치",
+                    2: "제어장치",
+                    3: "터미널장치",
+                    4: "콘솔장치"
+                },
+                infoAnswer: "1",
+                infoDesc: "채 중 입"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070212",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070213",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070214",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070215",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070216",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070217",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070218",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070219",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070220",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 04월 01일(2회)",
+                infoNumber: "20070206",
+                infoQuestion: "로더(loader)의 기능이 아닌 것은?",
+                infoChoice: {
+                    1: "할당(allocation)",
+                    2: "링킹(linking)",
+                    3: "재배치(relocation)",
+                    4: "스케줄링(scheduling)"
+                },
+                infoAnswer: "1",
+                infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
+            }
+        ]
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        let quizScore = 0;
+
+        // 문제 출력
+        const updateQuize = () => {
+            const exam = [];
+
+            quizInfo.forEach((question, number) => {
+                exam.push(`
+                    <div class="quiz">
+                        <div class="quize__header">
+                            <h2 class="quiz__title">${question.infoType} ${question.infoTime} </h2>
+                        </div>
+                        <div class="quize__main">
+                            <div class="quiz__question"><em>${number+1}</em>. ${question.infoQuestion}</div>
+                            <div class="quiz__view">
+                                <div class="dog__wrap">
+                                    <div class="true">정답입니다!</div>
+                                    <div class="false">틀렸습니다!</div>
+                                    <div class="card-container">
+                                        <div class="dog">
+                                            <div class="head">
+                                                <div class="ears"></div>
+                                                <div class="face"></div>
+                                                <div class="eyes">
+                                                    <div class="teardrop"></div>
+                                                </div>
+                                                <div class="nose"></div>
+                                                <div class="mouth">
+                                                    <div class="tongue"></div>
+                                                </div>
+                                                <div class="chin"></div>
+                                            </div>
+                                            <div class="body">
+                                                <div class="tail"></div>
+                                                <div class="legs"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__choice">
+                                <label for="choice1${number}">
+                                    <input type="radio" id="choice1${number}" name="choice${number}" class="select" value="1">
+                                    <span>${question.infoChoice[1]}</span>
+                                </label>
+                                <label for="choice2${number}">
+                                    <input type="radio" id="choice2${number}" name="choice${number}" value="2">
+                                    <span>${question.infoChoice[2]}</span>
+                                </label>
+                                <label for="choice3${number}">
+                                    <input type="radio" id="choice3${number}" name="choice${number}" value="3">
+                                    <span>${question.infoChoice[3]}</span>
+                                </label>
+                                <label for="choice4${number}">
+                                    <input type="radio" id="choice4${number}" name="choice${number}" value="4">
+                                    <span>${question.infoChoice[4]}</span>
+                                </label>
+                            </div>
+                            <div class="quiz__desc">정답은 <em>${question.infoAnswer}</em> 번 입니다.<br>${question.infoDesc}</div>
+                        </div>
+                    </div>
+                `)
+            });
+            exam.push(`
+                <div class="quiz__info">??점</div>
+                <div class="quiz__check">정답 확인</div> 
+            `);
+
+            quizWrap.innerHTML = exam.join("");
+
+        // 설명 숨기기
+        document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
+        
+        }
+        updateQuize();
+        
+        // 정답 확인
+        const answerQuiz = () => {
+            const quizChoices = document.querySelectorAll(".quiz__choice")
+
+            //사용자가 체크한 정답 == 문제 정답
+            quizInfo.forEach((question, number)=>{
+                const userSelector = `input[name=choice${number}]:checked`;
+                const quizSelectorWrap = quizChoices[number];
+                const userAnswer = (quizSelectorWrap.querySelector(userSelector)|| {}).value;
+                const dogWrap = quizWrap.querySelectorAll(".dog__wrap");
+
+                if(userAnswer == question.infoAnswer){
+                    dogWrap[number].classList.add("like");
+                    quizScore++;
+                } else {
+                    
+                    dogWrap[number].classList.add("dislike");
+                }
+            });
+            // 설명 보이기
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
+
+            // 점수 보이기
+            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length)* 100) +"점";
+        }
+
+        
+        
+        // 정답 클릭
+        document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
+
+        
+    </script>
+</body>
+</html>
