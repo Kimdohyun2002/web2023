@@ -38,3 +38,5 @@
 슬라이드 유형01 : https://kimdohyun2002.github.io/web2023/site/sliderType/sliderType01.html   
 
 #MySQL
+
+MySQL사이트 : https://kimdohyun2002.github.io/web2023/mysql/index.html
