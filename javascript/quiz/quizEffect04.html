@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
 </head>
-<body >
+<body>
     <header id="header">
         <h1><a href="../javascript14.html">Quiz</a> <em>주관식 확인하기 유형</em></h1>
         <ul>
@@ -20,8 +20,7 @@
         </ul>
     </header> 
     <!-- //header -->
-
-
+    
         <main id="main">
             <div class="quiz__wrap">
                 <div class="quiz">
@@ -80,8 +79,6 @@
                     <div class="quiz__desc"></div>
                 </div>
             </div>
-
-
         </div>
     </main>
     <!-- //main -->
@@ -125,10 +122,7 @@
             for(let i=0; i<=3; i++){
                 quizChoice[i].textContent = quizInfo[0].infoChoice[i];
             }
-            // quizChoice.forEach(function(e, i){
-            //     // quizChoice[i].textContent = quizInfo[0].infoChoice[i];
-            //     e.textContent = quizInfo[0].infoChoice[i];
-            // });
+            quizDesc.style.display = "none";
         };
 
         
