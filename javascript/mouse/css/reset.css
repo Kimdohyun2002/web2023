@@ -1,0 +1,73 @@
+@import url('https://webfontworld.github.io/eulyoo/Eulyoo1945.css');
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url('https://webfontworld.github.io/NanumBarunpen/NanumBarunpen.css');
+@import url('https://webfontworld.github.io/hallym/HallymMjo.css');
+@import url('https://webfontworld.github.io/busan/Busan.css');
+@import url('https://webfontworld.github.io/zess/BlackHanSans.css');
+@import url('https://webfontworld.github.io/mapo/MapoPeacefull.css');
+@import url('https://webfontworld.github.io/elice/EliceDigitalBaeum.css');
+@import url('https://webfontworld.github.io/welcome/Welcome.css');
+@import url('https://webfontworld.github.io/Cafe24Ssurround/Cafe24Ssurround.css');
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+*, *:before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.Eulyoo {
+    font-family: 'Eulyoo1945';
+    font-weight: 300;
+}   
+
+.Gmark {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+}
+.Nanum {
+    font-family: 'NanumBarunpen';
+    font-weight: 300;
+}
+.Hally {
+    font-family: 'HallymMjo';
+    font-weight: 300;
+}
+.Busan {
+    font-family: 'Busan';
+    font-weight: 300;
+}
+.Black {
+    font-family: 'BlackHanSans';
+    font-weight: 300;
+}
+.Mapo {
+    font-family: 'MapoPeacefull';
+    font-weight: 300;
+}
+.Welcome {
+    font-family: 'Welcome';
+    font-weight: 300;
+}
+.Cafe24 {
+    font-family: 'Cafe24Ssurround';
+    font-weight: 300;
+}
