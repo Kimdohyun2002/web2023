@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지/텍스트 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        li {
+            list-style: none;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* imgText__wrap */
+        .imgText__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .imgText__inner article {
+            width: 31.333%;
+        }
+        .imgText__inner .text span {
+            background-color: #666;
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .imgText__inner .text h3 {
+            font-size: 50px;
+            margin-bottom: 17px;
+        }
+        .imgText__inner .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .imgText__inner .text li {
+            position: relative;
+            padding-left: 14px;
+        }
+        .imgText__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .imgText__inner .text li a {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../asset/img/borderimage02.jpg);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../asset/img/borderimage01.jpg);
+        }
+        .imgText__inner .img.i1 a {
+            background-color: #2c140c;
+        }
+        .imgText__inner .img.i2 a {
+            background-color: #755338;
+        }
+    </style>
+</head>
+<body>
+    <section class="imgText__wrap section nexon">
+        <h2 class="blind">보더콜리의 키워드</h2>
+        <div class="container">
+            <div class="imgText__inner">
+                <article class="text">
+                    <span>NOTICE</span>
+                    <h3>보더콜리의<br> 키워드</h3>
+                    <p>보더콜리는 많은 장점들을 가지고 있는 강아지 입니다. 보더콜리를 보았을때 생각나는 키워드들은 정말 많죠</p>
+                    <ul>
+                        <li><a href="#">스마트 (Smart)</a></li>
+                        <li><a href="#">민첩 (Agile)</a></li>
+                        <li><a href="#">활발 (Energetic)</a></li>
+                        <li><a href="#">경주 개 (Racing dog)</a></li>
+                        <li><a href="#">지능적 (Intelligent)</a></li>
+                        <li><a href="#">높은 학습 능력 (High learning ability)</a></li>
+                        <li><a href="#">반응 속도 (Quick reaction time)</a></li>
+                        <li><a href="#">허드링 (Hurdling)</a></li>
+                        <li><a href="#">양치기 (Herding)</a></li>
+                        <li><a href="#">농장 개 (Farm dog)</a></li>
+                    </ul>
+                </article>
+                <article class="img i1">
+                    <a href="#">보더콜리</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">보더콜리</a>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

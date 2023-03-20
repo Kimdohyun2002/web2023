@@ -23,11 +23,43 @@
             background-color: rgba(255, 255, 255, 0.1);
             user-select: none;
             pointer-events: none;
+            transition: 
+                background-color 0.3s,
+                border-color 0.3s,
+                transform 0.6s
+                ;
         }
 
         .mouse__cursor.s1 {
             background-color: rgba(255, 165, 0, 0.4);
             border-color: orange;
+        }
+        .mouse__cursor.s2 {
+            background-color: rgba(140, 0, 255, 0.4);
+            border-color: rgb(140, 0, 255);
+            transform: scale(2) rotateY(720deg);
+        }
+        .mouse__cursor.s3 {
+            background-color: rgba(0, 47, 255, 0.4);
+            border-color: rgb(0, 47, 255);
+            transform: scale(2) rotateX(720deg);
+        }
+        .mouse__cursor.s4 {
+            background-color: rgba(0, 47, 255, 0.4);
+            border-color: rgb(0, 47, 255);
+            transform: scale(10);
+            border-radius: 0;
+        }
+        .mouse__cursor.s5 {
+            background-color: rgba(255, 81, 0, 0.4);
+            border-color: rgb(255, 81, 0);
+            transform: scale(5) skew(140deg) rotate(200deg);
+            
+        }
+        .mouse__cursor.s6 {
+            background-color: rgba(0, 47, 255, 0.4);
+            border-color: rgb(0, 47, 255);
+            transform: scale(0.1);
         }
         
         .mouse__text {
@@ -115,10 +147,76 @@
         window.addEventListener("mousemove", function(e){
             cursor.style.left = e.clientX - 25 + "px";
             cursor.style.top = e.clientY - 25 + "px";
-        })
-        document.querySelector(".s1").addEventListener("mouseover", function(){
-            cursor.classList.add("s1");
-        })
+        });
+        // for()
+        // for(let i=1; i<=6; i++){
+        //     document.querySelector(".s"+i).addEventListener("mouseover", function(){
+        //         cursor.classList.add("s"+i);
+        //     });
+        //     document.querySelector(".s"+i).addEventListener("mouseout", function(){
+        //         cursor.classList.remove("s"+i);
+        //     });
+        // }
+
+        // forEach()
+        document.querySelectorAll(".mouse__text span").forEach(function(span, num){
+            span.addEventListener("mouseover", function(){
+                cursor.classList.add("s"+(num+1));
+            });
+            span.addEventListener("mouseout", function(){
+                cursor.classList.remove("s"+(num+1));
+            });
+        });
+
+        // getAttribute();
+        document.querySelectorAll(".mouse__text span").forEach(function(span){
+            let attr = span.getAttribute("class");  // attr = s1 s2 s3 s4 s5 s6            
+            span.addEventListener("mouseover", function(){
+                cursor.classList.add(attr);
+            });
+            span.addEventListener("mouseout", function(){
+                cursor.classList.remove(attr);
+            });
+        });
+
+        // setAttribute();
+
+        // document.querySelector(".s1").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s1");
+        // });
+        // document.querySelector(".s1").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s1");
+        // });
+        // document.querySelector(".s2").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s2");
+        // });
+        // document.querySelector(".s2").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s2");
+        // });
+        // document.querySelector(".s3").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s3");
+        // });
+        // document.querySelector(".s3").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s3");
+        // });
+        // document.querySelector(".s4").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s4");
+        // });
+        // document.querySelector(".s4").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s4");
+        // });
+        // document.querySelector(".s5").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s5");
+        // });
+        // document.querySelector(".s5").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s5");
+        // });
+        // document.querySelector(".s6").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s6");
+        // });
+        // document.querySelector(".s6").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s6");
+        // });
     </script>
 </body>
 </html>
