@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(prompt("첫 번째 수를 입력하세요."));
+        let num2 = parseInt(prompt("두 번째 수를 입력하세요."));
+        
+        let gcd = 1;
+        for(let i=1; i<=num1 && i<=num2; i++){
+            if(num1%i==0 && num2%i==0){
+                gcd = i;
+            }
+        }
+        console.log(num1+"과 "+num2+"의 최대공약수는 "+gcd+"입니다")
+        
+
+    </script>
+</body>
+</html>
