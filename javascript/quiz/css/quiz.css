@@ -121,6 +121,16 @@
 .quiz__question em {
     color: #ff3c3c;
 }
+.question__number {
+    margin: 10px;
+    padding: 2px 5px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'NanumSquareNeo';
+    display: inline-block;
+    background-color: black;
+    border-radius: 40px;
+}
 .quiz__answer {
     font-family: 'NanumSquareNeo';
     padding: 20px;
@@ -143,7 +153,7 @@
     background-color: #d9ffa7;
 }
 .quiz__answer .next {
-    background-color: #e5ffc4;
+    background-color: #ffae51;
     border: 3px ridge #cacaca;
     width: 100%;
     font-family: 'NanumSquareNeo';

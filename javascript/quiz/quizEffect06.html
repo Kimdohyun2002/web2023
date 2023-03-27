@@ -35,6 +35,7 @@
                 <div class="quiz__question"></div>
                 <div class="quiz__view">
                     <div class="dog__wrap">
+                        <div class="question__number"></div>
                         <div class="true">정답입니다!</div>
                         <div class="false">틀렸습니다!</div>
                         <div class="card-container">
@@ -58,9 +59,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="quiz__info"></div>
+                    <div class="quiz__check"></div>
                 </div>
-                <!-- <div class="quiz__choice">
-                    <label for="choice1">
+                <div class="quiz__choice">
+                    <!-- <label for="choice1">
                         <input type="radio" id="choice1" name="choice" class="select" value="1">
                         <span></span>
                     </label>
@@ -80,6 +83,7 @@
                 <div class="quiz__answer">
                     <button class="next">다음 문제</button>
                 </div>
+                
                 <div class="quiz__desc"></div>
             </div>
             </div>     
@@ -101,7 +105,7 @@
                 infoNumber: "20070201",
                 infoQuestion: "flip-flop의 종류에 해당하지 않는 것은?",
                 infoChoice: ["R-S","J-K","D","R"],
-                infoAnswer: "4",
+                infoAnswer: "R",
                 infoDesc: "R 플립플롭은 존재 하지 않습니다."
             },{
                 infoType: "정보처리 기능사",
@@ -109,7 +113,7 @@
                 infoNumber: "20070202",
                 infoQuestion: "보기의 도형과 관련 있는 사항은?<br><img style='width:300px' src='../assets/img/noname01.tmp'>",
                 infoChoice: ["OR 게이트", "버퍼(buffer)", "NAND 게이트", "인버터(Inverter)"],
-                infoAnswer: "4",
+                infoAnswer: "인버터(Inverter)",
                 infoDesc: "그림은 인버터(NOT)입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -117,7 +121,7 @@
                 infoNumber: "20070203",
                 infoQuestion: "<img style='width:300px' src='../assets/img/question3.jpg'>",
                 infoChoice: ["1번","2번","3번","4번"],
-                infoAnswer: "3",
+                infoAnswer: "4번",
                 infoDesc: "드모르간 정리는 위에 긴 막대를 쪼개고 안의 부호를 바꾸는 방식입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -125,7 +129,7 @@
                 infoNumber: "20070204",
                 infoQuestion: "논리적 연산의 종류에 해당되지 않는 것은?",
                 infoChoice: ["AND","OR","Rotate","ADD"],
-                infoAnswer: "4",
+                infoAnswer: "ADD",
                 infoDesc: "ADD는 덧셈을 의미하며 논리연산이 아닌 산술 연산 입니다.<br>산술적연산은 4가지입니다.<br>ADD - 덧셈 / SUB - 뺄셈 / MUL - 곱셈 / DIV - 나눗셈<br>그외에 산술적 shift 가 있는데 좌로 2shift x2를 의미하며,<br> 우로 2shift 는 1/2를 의미"
             },{
                 infoType: "정보처리 기능사",
@@ -141,10 +145,126 @@
                 infoNumber: "20070206",
                 infoQuestion: "로더(loader)의 기능이 아닌 것은?",
                 infoChoice: ["할당(allocation)","링킹(linking)","재배치(relocation)","스케줄링(scheduling)"],
-                infoAnswer: "4",
+                infoAnswer: "스케줄링(scheduling)",
                 infoDesc: "로더는 메모리로 프로그램을 불러 주는 기능을 합니다..스케쥴링이란 CPU의 스케쥴을 짜주는것을 말합니다."
             }
         ]
+
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizTitle = quizWrap.querySelector(".quiz__title");
+        const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const quizChoice = quizWrap.querySelector(".quiz__choice");
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
+        const quizNext = quizWrap.querySelector(".quiz__answer .next");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizQuestionNum = quizWrap.querySelector(".question__number")
+        const quizInfO = quizWrap.querySelector(".quiz__info");
+        const quizCheck = quizWrap.querySelector(".quiz__check");
+        
+        let quizCount = 0;
+        let quizScore = 0;
+        
+
+        // 문제출력
+        const updateQuize = (index) => {
+            let typeTag = `
+                <span>${quizInfo[index].infoType}</span>
+                <em>${quizInfo[index].infoTime}</em>
+            `;
+            let questionTag = `
+                <em>${index+1}</em>.
+                <span>${quizInfo[index].infoQuestion}</span>
+            `;
+            let questionnumTag = `
+                <div class="question__number">현재 남은 문제는 ${[quizInfo.length-index]} 현재 ${[index+1]} 번</div>                
+            `;
+            let choiceTag = `
+                    <label for="choice1">
+                        <input type="radio" id="choice1" name="choice" class="select" value="1">
+                        <span>${quizInfo[index].infoChoice[0]}</span>
+                    </label>
+                    <label for="choice2">
+                        <input type="radio" id="choice2" name="choice" class="select"  value="2">
+                        <span>${quizInfo[index].infoChoice[1]}</span>
+                    </label>
+                    <label for="choice3">
+                        <input type="radio" id="choice3" name="choice" class="select"  value="3">
+                        <span>${quizInfo[index].infoChoice[2]}</span>
+                    </label>
+                    <label for="choice4">
+                        <input type="radio" id="choice4" name="choice" class="select"  value="4">
+                        <span>${quizInfo[index].infoChoice[3]}</span>
+                    </label>
+                `;
+            let descTag = `
+                정답은 ${quizInfo[index].infoAnswer} 입니다.
+                ${quizInfo[index].infoDesc}
+            `;
+            
+            
+            quizTitle.innerHTML = typeTag;
+            quizQuestion.innerHTML = questionTag;
+            quizChoice.innerHTML = choiceTag;
+            quizDesc.innerHTML = descTag;
+            quizQuestionNum.innerHTML = questionnumTag;
+            quizInfO.innerHTML = "??"
+            quizCheck.innerHTML = "정답 확인"
+
+            // 보기 선택자
+            const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
+            const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
+            
+            // quizChoiceSpan.forEach((span, num) => {
+            //     span.setAttribute("onclick", "choiceSelected(this)")
+            // });
+
+            for(let i=0; i<quizChoiceSpan.length; i++){
+                quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
+                // quizChoiceInput.disabled = "true";
+            }
+            
+
+            // 다음 버튼, 해설 숨기기
+            quizAnswer.style.display = "none";
+            quizDesc.style.display = "none";
+        };
+
+        updateQuize(quizCount);
+
+
+        // 객관식 선택
+        function choiceSelected(answer){
+            let userAnswer = answer.textContent;                    // 사용자 정답
+            let currentAnswer = quizInfo[quizCount].infoAnswer;     // 문제 정답
+
+
+            if(userAnswer == currentAnswer){
+                console.log("정답입니다.");
+                dogWrap.classList.add("like");
+            } else {
+                console.log("오답입니다.");
+                dogWrap.classList.add("dislike");
+            }
+
+            // 다음 버튼, 해설 나타나기
+            
+            quizAnswer.style.display = "block";
+            quizDesc.style.display = "block";
+        }
+        
+    
+        // 정답 확인
+        quizNext.addEventListener("click", () => {
+            quizCount++;
+            updateQuize(quizCount);
+
+            dogWrap.classList.remove("like", "dislike");
+        });
+
+        
+        document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
     </script>
 </body>
 </html>
