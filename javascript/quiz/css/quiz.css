@@ -279,6 +279,154 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
+
+/* cbt 유형 */
+.quiz__wrap__cbt {
+    padding: 0 20px;
+    font-family: 'NanumSquareNeo';
+}
+.cbt__conts {
+    width: calc(100% - 300px);
+    background-color: #fff;
+}
+.cbt__header {
+    width: calc(100% - 300px);
+    background-color: #fff;
+    border: 8px ridge #cacaca;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #e3edff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cbt__time {
+    position: relative;
+    padding-left: 40px !important;
+}
+.cbt__time::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-alarm' width='22' height='22' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Ccircle cx='12' cy='13' r='7' /%3E%3Cpolyline points='12 10 12 13 14 13' /%3E%3Cline x1='7' y1='4' x2='4.25' y2='6' /%3E%3Cline x1='17' y1='4' x2='19.75' y2='6' /%3E%3C/svg%3E");
+}
+.cbt__submit {
+    position: relative;
+    padding-left: 40px !important;
+}
+.cbt__submit::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+}
+.cbt__header > div > div {
+    background-color: #546482;
+    display: inline-block;
+    margin-left: 5px;
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 20px;
+}
+.cbt__aside {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    width: 280px;
+    height: 800px;
+    background-color: #fff;
+    border: 8px ridge #cacaca;
+}
+.cbt__quiz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cbt__quiz .cbt {
+    width: 49%;
+    border: 8px ridge #cacaca;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.cbt__info {
+    background-color: #e3edff;
+    border-bottom: 8px ridge #cacaca;
+    padding: 20px;
+    text-align: center;
+}
+.cbt__info .title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 5px;
+}
+.cbt__info span {
+    display: inline-block;
+}
+.cbt__omr {
+    padding: 20px;
+}
+.cbt__omr .omr {
+    margin: 5px 0;
+    display: grid;
+    grid-template-columns: 50px 38px 38px 38px 38px;
+    grid-template-rows: 20px;
+    align-items: center;
+}
+.cbt__omr .omr input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.cbt__omr .omr strong {
+    display: inline-block;
+    text-align: center;
+    padding: 2px;
+    background-color: #313E55;
+    color: #fff;
+    font-family: 'Helvetica Neue';
+    margin-right: 10px;
+    font-weight: bold;
+}
+.cbt__omr .omr label {
+    box-shadow: 0 0 0 1px #313E55;
+    cursor: pointer;
+    line-height: 0.4;
+    text-align: center;
+    width: 28px;
+    height: 8px;
+    font-family: 'Helvetica Neue';
+    position: relative;
+}
+.cbt__omr .omr label::after {
+    background-color: #555;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    transition: width 0.1s linear;
+}
+.cbt__omr .omr input[type=radio]:checked + label::after {
+    width: 100%;
+}
+.cbt__omr .omr .label-inner {
+    background-color: #fff;
+    padding: 0.25em 0.13em;
+    transform: translateY(-0.25em);
+    width: 20px;
+    color: #313E55;
+}
+
 /* .dog__wrap */
 .dog .tail,
 .dog .chin, 

@@ -1,0 +1,110 @@
+/* text__wrap */
+.text__inner {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text__inner .text {
+    width: 32.33333%;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    padding: 90px 20px 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.text__inner .text:hover {
+    background-color: #f5f5f5;
+}
+.text__inner .text::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-color: #ce3939;
+    background-image: url(../img/textType01.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border-radius: 50%;
+}
+.text__inner .text.t1::before {
+    background-color: #ff6d6d;
+    background-image: url(../img/textType01.svg);
+}
+.text__inner .text.t2::before {
+    background-color: #ffdf6d;
+    background-image: url(../img/textType02.svg);
+}
+.text__inner .text.t3::before {
+    background-color: #93ff6d;
+    background-image: url(../img/textType03.svg);
+}
+.text__inner .text.t4::before {
+    background-color: #6dffcb;
+    background-image: url(../img/textType04.svg);
+}
+.text__inner .text.t5::before {
+    background-color: #6d8dff;
+    background-image: url(../img/textType05.svg);
+}
+.text__inner .text.t6::before {
+    background-color: #d06dff;
+    background-image: url(../img/textType06.svg);
+}
+.text__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text__desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.text__btn {
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+.text__btn::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/iconplus.svg);
+    transition: all 0.3s;
+}
+.text__btn:hover::before {
+    transform: rotate(360deg);
+}
+.section__small {
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: #727272;
+    color:#fff;
+    padding: 1px 23px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+@media (max-width: 960px){
+    .text__inner .text {
+        width: 49%;
+    }
+    .container span {
+        text-align: center;
+    }
+}
+@media (max-width: 600px){
+    .text__inner .text {
+        width: 100%;
+    }
+}

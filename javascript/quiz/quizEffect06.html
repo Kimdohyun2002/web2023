@@ -4,97 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈이펙트06</title>
-
+    <title>퀴즈 이펙트06</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
 </head>
-<body >
+<body>
     <header id="header">
-        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인하기(여러문제) 유형 : 슬라이드 유형</em></h1>
+        <h1><a href="../javascript14.html">Quiz</a> <em>객관식(슬라이드) 확인하기(여러문제) 유형</em></h1>
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li><a href="quizEffect02.html">2</a></li>
-            <li><a href="quizEffect03.html">3</a></li>  
-            <li><a href="quizEffect04.html">4</a></li>         
-            <li><a href="quizEffect05.html">5</a></li>         
-            <li class="active"><a href="quizEffect05.html">6</a></li>           
-            
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li><a href="quizEffect05.html">5</a></li>
+            <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect05.html">7</a></li>
         </ul>
-    </header> 
+    </header>
     <!-- //header -->
-
-
     <main id="main">
         <div class="quiz__wrap">
             <div class="quiz">
-                <div class="quize__header">
+                <div class="quiz__header">
                     <h2 class="quiz__title"></h2>
                 </div>
-                <div class="quize__main">
-                <div class="quiz__question"></div>
-                <div class="quiz__view">
-                    <div class="dog__wrap">
-                        <div class="question__number"></div>
-                        <div class="true">정답입니다!</div>
-                        <div class="false">틀렸습니다!</div>
-                        <div class="card-container">
-                            <div class="dog">
-                                <div class="head">
-                                    <div class="ears"></div>
-                                    <div class="face"></div>
-                                    <div class="eyes">
-                                        <div class="teardrop"></div>
+                <div class="quiz__main">
+                    <div class="quiz__question"></div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="count"></div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
                                     </div>
-                                    <div class="nose"></div>
-                                    <div class="mouth">
-                                        <div class="tongue"></div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
                                     </div>
-                                    <div class="chin"></div>
-                                </div>
-                                <div class="body">
-                                    <div class="tail"></div>
-                                    <div class="legs"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="quiz__info"></div>
-                    <div class="quiz__check"></div>
+                    <div class="quiz__choice">
+                        <!-- <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" class="select" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" class="select" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio"id="choice3" name="choice" class="select" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio"id="choice4" name="choice" class="select" value="4">
+                            <span></span>
+                        </label> -->
+                    </div>
+                    <div class="quiz__answer">
+                        <button class="next">다음 문제</button>
+                    </div>
+                    <div class="quiz__desc"></div>
                 </div>
-                <div class="quiz__choice">
-                    <!-- <label for="choice1">
-                        <input type="radio" id="choice1" name="choice" class="select" value="1">
-                        <span></span>
-                    </label>
-                    <label for="choice2">
-                        <input type="radio" id="choice2" name="choice" value="2">
-                        <span></span>
-                    </label>
-                    <label for="choice3">
-                        <input type="radio" id="choice3" name="choice" value="3">
-                        <span></span>
-                    </label>
-                    <label for="choice4">
-                        <input type="radio" id="choice4" name="choice" value="4">
-                        <span></span>
-                    </label> -->
-                </div>
-                <div class="quiz__answer">
-                    <button class="next">다음 문제</button>
-                </div>
-                
-                <div class="quiz__desc"></div>
             </div>
-            </div>     
         </div>
-    </div>
     </main>
     <!-- //main -->
-
-
     <footer id="footer">
-        <a href="mail:kshkmn0929@naver.com">kshkmn0929@naver.com</a>
+        <a href="mailto:1346zany@gmail.com">1346zany@gmail.com</a>
     </footer>
     <!-- //footer -->
     <script>
@@ -150,25 +141,22 @@
             }
         ]
 
-        // 선택자
+        //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizTitle = quizWrap.querySelector(".quiz__title");
-        const quizQuestion = quizWrap.querySelector(".quiz__question");
-        const quizChoice = quizWrap.querySelector(".quiz__choice");
+        const quizQuestion = quizWrap.querySelector(".quiz__question")
+        const quizChoice = quizWrap.querySelector(".quiz__choice")
         const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const dogWrapCount= quizWrap.querySelector(".dog__wrap .count");
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
-        const quizQuestionNum = quizWrap.querySelector(".question__number")
-        const quizInfO = quizWrap.querySelector(".quiz__info");
-        const quizCheck = quizWrap.querySelector(".quiz__check");
-        
-        let quizCount = 0;
-        let quizScore = 0;
-        
-
-        // 문제출력
-        const updateQuize = (index) => {
+        const quizCheck = quizWrap.querySelector(".quiz__check span");
+        let quizCount = 0;      //퀴즈 번호
+        let quizScore = 0;      //현재 점수
+        let quizLength = quizInfo.length;
+       //문제출력
+       const updateQuiz = (index) => {
             let typeTag = `
                 <span>${quizInfo[index].infoType}</span>
                 <em>${quizInfo[index].infoTime}</em>
@@ -177,94 +165,83 @@
                 <em>${index+1}</em>.
                 <span>${quizInfo[index].infoQuestion}</span>
             `;
-            let questionnumTag = `
-                <div class="question__number">현재 남은 문제는 ${[quizInfo.length-index]} 현재 ${[index+1]} 번</div>                
-            `;
             let choiceTag = `
-                    <label for="choice1">
-                        <input type="radio" id="choice1" name="choice" class="select" value="1">
-                        <span>${quizInfo[index].infoChoice[0]}</span>
-                    </label>
-                    <label for="choice2">
-                        <input type="radio" id="choice2" name="choice" class="select"  value="2">
-                        <span>${quizInfo[index].infoChoice[1]}</span>
-                    </label>
-                    <label for="choice3">
-                        <input type="radio" id="choice3" name="choice" class="select"  value="3">
-                        <span>${quizInfo[index].infoChoice[2]}</span>
-                    </label>
-                    <label for="choice4">
-                        <input type="radio" id="choice4" name="choice" class="select"  value="4">
-                        <span>${quizInfo[index].infoChoice[3]}</span>
-                    </label>
-                `;
+                <label for="choice1">
+                    <input type="radio" id="choice1" name="choice" class="select" value="1">
+                    <span>${quizInfo[index].infoChoice[0]}</span>
+                </label>
+                <label for="choice2">
+                    <input type="radio" id="choice2" name="choice" class="select" value="2">
+                    <span>${quizInfo[index].infoChoice[1]}</span>
+                </label>
+                <label for="choice3">
+                    <input type="radio"id="choice3" name="choice" class="select" value="3">
+                    <span>${quizInfo[index].infoChoice[2]}</span>
+                </label>
+                <label for="choice4">
+                    <input type="radio"id="choice4" name="choice" class="select" value="4">
+                    <span>${quizInfo[index].infoChoice[3]}</span>
+                </label>
+            `;
             let descTag = `
-                정답은 ${quizInfo[index].infoAnswer} 입니다.
+                정답은 ${quizInfo[index].infoAnswer}입니다.<br>
                 ${quizInfo[index].infoDesc}
             `;
-            
-            
             quizTitle.innerHTML = typeTag;
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
-            quizQuestionNum.innerHTML = questionnumTag;
-            quizInfO.innerHTML = "??"
-            quizCheck.innerHTML = "정답 확인"
-
+            let quizLength = quizInfo.length - quizCount;
+            dogWrapCount.innerHTML = "총" + quizLength + "문제 중" + (quizLength) + "문제 남았습니다.";
             // 보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
             const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
-            
-            // quizChoiceSpan.forEach((span, num) => {
-            //     span.setAttribute("onclick", "choiceSelected(this)")
+            // quizChoiceSpan.forEach((span,num) => {
+            //     span.setAttribute("onclick", "choiceSelected(this)");
             // });
-
             for(let i=0; i<quizChoiceSpan.length; i++){
                 quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
-                // quizChoiceInput.disabled = "true";
+                //quizChoiceInput[i].disabled = "true";
             }
-            
-
-            // 다음 버튼, 해설 숨기기
+            //다음 버튼, 해설 숨기기
             quizAnswer.style.display = "none";
             quizDesc.style.display = "none";
         };
-
-        updateQuize(quizCount);
-
-
-        // 객관식 선택
+        updateQuiz(quizCount);
+        //객관식 선택
         function choiceSelected(answer){
-            let userAnswer = answer.textContent;                    // 사용자 정답
-            let currentAnswer = quizInfo[quizCount].infoAnswer;     // 문제 정답
-
-
+            let userAnswer = answer.textContent;                    //사용자 정답
+            let currentAnswer = quizInfo[quizCount].infoAnswer;     //문제 정답
             if(userAnswer == currentAnswer){
-                console.log("정답입니다.");
+                // console.log("정답입니다.")
                 dogWrap.classList.add("like");
+                dogWrap.classList.remove("dislike");
+                quizScore++;
+                quizAnswer.style.display="block";
+                quizDesc.style.display="block"
             } else {
-                console.log("오답입니다.");
+                // console.log("오답입니다.")
                 dogWrap.classList.add("dislike");
+                dogWrap.classList.remove("like");
+                quizAnswer.style.display="block";
+                quizDesc.style.display="block"
             }
 
-            // 다음 버튼, 해설 나타나기
+            let countLast = Math.ceil((quizScore/quizInfo.length)*100);
+            let countResult = (countLast > 60) ? "합격": "불합격"
             
-            quizAnswer.style.display = "block";
-            quizDesc.style.display = "block";
+            //마지막 문제일 때
+            if(quizCount == quizInfo.length-1){
+                quizAnswer.style.display = "none";
+                dogWrapCount.innerHTML = "총" +quizScore+ "문제를 맞추었습니다. <br>점수는 " +countLast+ "입니다." + countResult + "입니다.";
+            }
         }
-        
-    
         // 정답 확인
         quizNext.addEventListener("click", () => {
             quizCount++;
-            updateQuize(quizCount);
-
-            dogWrap.classList.remove("like", "dislike");
+            updateQuiz(quizCount);
+            dogWrap.classList.remove("like","dislike");
         });
-
-        
-        document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
     </script>
 </body>
 </html>

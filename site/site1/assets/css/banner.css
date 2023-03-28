@@ -1,0 +1,40 @@
+/* banner */
+#bannerType {
+    background-image: url(../img/BANNER-TYPE01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.banner__inner {
+text-align: center;
+color: #fff;
+}
+.banner__inner h3 {
+margin-bottom: 45px;
+font-size: 50px;
+}
+.banner__inner p {
+margin-bottom: 90px;
+font-size: 16px;
+line-height: 1.6;
+}
+.banner__inner a {
+color: #fff;
+text-decoration: underline;
+}
+
+@media (max-width: 960px){
+    .banner__inner h3 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    .banner__inner h3 {
+        font-size: 30px;
+    }
+    .banner__inner p {
+        margin-bottom: 50px;
+    }
+}
