@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 오버</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        img {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h2>이미지에 마우스를 오버해보세요</h2>
+    <div class="image1">
+        <img src="assets/img/m1.png" alt="너 마음대로 해 이미지">
+    </div>
+    <div class="image2">
+        <img src="assets/img/m2.png" alt="너 마음대로 해 이미지">
+    </div>
+    
+
+
+    <script>
+
+        const img1 = document.querySelector(".image1");
+        const img2 = document.querySelector(".image2");
+
+        img2.style.display = "none";
+
+        document.querySelector("img").addEventListener("mouseover", function(){
+            img1.style.display = "none";
+            img2.style.display = "block"; 
+        })
+        document.querySelector("img").addEventListener("mouseout", function(){
+            img1.style.display = "block";
+            img2.style.display = "none"; 
+        })
+    </script>
+</body>
+</html>

@@ -8,13 +8,42 @@
 </head>
 <body>
     <script>
-   {
-    let a, b, result;
-    a = 7, b = 4
-    result = a | b;
+        {
+            let a = 2, r = 3, total = a;
 
-    console.log(result)
-}
+        for(let i=0; i<3; i++){
+            a *= r;
+            total += a;
+        }
+        console.log(total); //80
+        }
+
+        {
+            let a, b, c, sum;
+            a = b = 1;
+            sum = a + b;
+            
+            for(let i=3; i<=5; i++){
+                c = a + b;
+                sum += c;
+                a = b;
+                b = c;
+            }
+            console.log(sum)
+        }
+
+        {
+            let num = 10;
+            let result;
+            num << 2;
+            result = num >> 2;
+
+            console.log(result);
+        }
+
+        // [영어] 테이블에서 등급이 A부터 D사이인 학생의 이름을 검색하되 중복된 값을 제거한다.A부터
+
+        // SELECT DISTINCT ____ FROM ____ WHERE IN('A','B','C','D');
     </script>
 </body>
 </html>
