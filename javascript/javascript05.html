@@ -264,29 +264,28 @@
                     </ul>
                     <div class="script">
 <pre><code class="Language-js">{
-    "javascript".split("");     //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'] 
-    "javas cript".split("");     //['java', 'script']
-    "java scr ipt".split("");     //['java', 'scr', 'ipt']
-    
-    "javascript".split("", 1);     //['j']
-    "javascript".split("", 2);     //['j','a']
-    "javascript".split("", 3);     //['j','a','v']
-    
-    "javascript".split(" ", 1);     //['java']
-    "javascript".split(" ", 2);     //['java','script']
-    
-    "javascript".split("j");     //['','avascript']
-    "javascript".split("a");     //['j','v','avascript']
-    "javascript".split("e");     //['javascript']
-    
-    "java/scr/ipt".split("/");           //['java','scr','ipt']
-    "java&scr!ipt".split("&");           //['java','scr!ipt']
-    "java&scr!ipt".split("!");           //['java&scr','ipt']
-    "java&scr!ipt".split("/&|\!/");      //['java','scr','ipt']
-    "javascript".split("").join();        //j,a,v,a,s,c,r,i,p,t
-    "javascript".split("").join("*");        //j*a*v*a*s*c*r*i*p*t
-    "javascript".split("").reverse().join();        //t,p,i,r,c,s,a,v,a,j
-    "javascript".split("").reverse().join("/");        //t/p/i/r/c/s/a/v/a/j
+    "javascript".split("");         //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+    "java script".split(" ");       //['java', 'script']
+    "java scr ipt".split(" ");      //['java', 'scr', 'ipt']
+    "javascript".split("", 1);      //['j']
+    "javascript".split("", 2);      //['j', 'a']
+    "javascript".split("", 3);      //['j', 'a', 'v']
+    "java script".split(" ", 1);    //['java']
+    "java script".split(" ", 2);    //['java', 'script']
+
+    "java script".split("j");       //['', 'avascript']
+    "java script".split("a");       //['j', 'v', 'script']
+    "java script".split("e");       //['javascript']
+
+    "java/scr/ipt".split("/");      //['java', 'scr', 'ipt']
+    "java&scr!ipt".split("&")       //['java', 'scr!ipt']
+    "java&scr!ipt".split("!")       //['java&scr', 'ipt']
+    "java&scr!ipt".split(/&|\!/)    //['java', 'scr', 'ipt']
+
+    "javascript".split("").join();              //j,a,v,a,s,c,r,i,p,t
+    "javascript".split("").join("*")            //j*a*v*a*s*c*r*i*p*t
+    "javascript".split("").reverse().join();    //t,p,i,r,c,s,a,v,a,j
+    "javascript".split("").reverse().join("/"); //t/p/i/r/c/s/a/v/a/j
 }
 </code></pre>
                     </div>
