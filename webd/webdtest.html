@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-style: none;
+        }
+        a {
+            font-style: none;
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        #wrap {
+            width: 1000px;       
+            margin: 0 auto;  
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        #header h1 img {
+            width: 150px;
+        }
+        #header nav li {
+            display: inline-block;
+            padding: 20px;
+        }
+        .banner {
+            margin-bottom: 15px;
+        }
+        .banner2 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .notice {
+            display: flex;
+            justify-content: space-between;
+        }
+        .notice img {
+            width: 24%;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        .banner2 h4 {
+            display: inline-block;
+        }
+        .banner2 .not1 {
+            width: 49%;
+            border: 1px solid #ccc;
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .banner2 .not1 h4 {
+            margin-bottom: 20px;
+        }
+        .banner2 .not2 {
+            width: 49%;
+        }
+        
+        .banner2 .not1 desc {
+            width: 70%;
+            display: flex;
+        }
+        .banner2 .not1 li {
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner2 .not1 span {
+            width: 30%;
+            text-align: right;
+        }
+        #footer {
+            border-top: 1px solid #ccc;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+        #footer address strong {
+            display: block;
+            margin-top: 20px;
+        }
+        .yes {
+            position: absolute;
+            top: 30px;
+            right: 70px;
+        }
+        .plus {
+            width: 30px;
+            position: absolute;
+            top: 27px;
+            right: 33px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1><img src="img/logo.jpg" alt="롯데월드"></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">즐길거리</a></li>
+                    <li><a href="#">요금/우대혜택</a></li>
+                    <li><a href="#">참여프로그램</a></li>
+                    <li><a href="#">이용가이드</a></li>
+                    <li><a href="#">소통서비스</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section class="banner">
+                <img src="img/banner01.jpg" alt="미라클있수마수">
+            </section>
+            <section class="banner2">
+                <div class="not1">
+                    <h4>롯데월드 소식</h4>
+                    <ul>
+                        <li class="desc"><a href="#">그럴싸진관 미라클</a><span>2023.03.31</span></li>
+                        <li class="desc"><a href="#">드림스테이지 '힘내 소중한 너'</a><span>2023.03.31</span></li>
+                        <li class="desc"><a href="#">힘내 소중한 너'음원 발매</a><span>2023.03.31</span></li>
+                        <li class="desc"><a href="#">이용 요금 조정 안내</a><span>2023.03.31</span></li>
+                    </ul>
+                    <div class="yes">더보기</div>
+                    <img src="img/b.jpg" class="plus" alt="더보기">
+                </div>
+                <div class="not2">
+                    <img src="img/banner02.jpg" alt="">
+                </div>
+            </section>
+            <section class="card">
+                <h3>특별한 경험</h3>
+                <div class="notice">
+                    <img src="img/notice01.jpg" alt="#">
+                    <img src="img/notice02.jpg" alt="#">
+                    <img src="img/notice03.jpg" alt="#">
+                    <img src="img/notice04.jpg" alt="#">
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <address>
+                서울특별시 송파수 올림픽로 240 호텔롯데 롯데월드 | 대표자 : 박동기<br>
+                사업자등록번호 : 210-85-00014 | 통신판매업신고번호 | 송파 | 전화 : 1661-2000 <br>
+                <strong>COPYRIGHT 2022 LOTTEWORLD.ALL.RIGHT RESERVED</strong>
+            </address>
+        </footer>
+    </div>
+</body>
+</html>
