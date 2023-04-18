@@ -11,13 +11,13 @@
             margin: 0;
             padding: 0;
         }
-        .wrap {
+        .wrap12 {
             width: 100%;
             height: 950px;
             background-size: cover;
             z-index: 1;
         }
-        .main {
+        .main12 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,16 +28,16 @@
             font-family: "NexonLv1Gothic";
             color: red;
         }
-        .author {
+        .author1 {
             padding-top: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <div class="main">
-            <div class="quote"></div> 
-            <div class="author"></div>
+    <div class="wrap12">
+        <div class="main12">
+            <div class="quote1"></div> 
+            <div class="author1"></div>
         </div>
     </div>
 </body>
@@ -49,8 +49,8 @@
         .then(response => response.json())
         .then(data => {
             let randomNumber = Math.floor(Math.random() * data.quotes.length);
-            let divQuote = document.querySelector(".quote");
-            let divAuthor = document.querySelector(".author");
+            let divQuote = document.querySelector(".quote1");
+            let divAuthor = document.querySelector(".author1");
             divQuote.innerHTML = data.quotes[randomNumber].quote;
             divAuthor.innerHTML = data.quotes[randomNumber].author;
         })
@@ -61,7 +61,7 @@
     randomQuote();
 
     function randomImg(){
-        let wrapImg = document.querySelector(".wrap");
+        let wrapImg = document.querySelector(".wrap12");
         const bgimgURL = `https://source.unsplash.com/random/?nature&t=${new Date().getTime()}`;
         wrapImg.style.backgroundImage = `url(${bgimgURL})`;
     }
