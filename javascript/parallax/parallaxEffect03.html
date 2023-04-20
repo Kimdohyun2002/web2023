@@ -92,6 +92,18 @@
             background-image: url(https://source.unsplash.com/500x500/?white);}
         .s1-img1-5 > div:last-child {
             background-image: url(https://source.unsplash.com/500x500/?sepia);}
+        .classImg {
+            background-image: url(img/IMG_3623.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 60%;
+            height: 60%;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body>
@@ -105,8 +117,10 @@
             data-3000="font-size: 0vw; opacity: 0"
         >hello</div>
         <div class="s1-text2 fixed" 
-            data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg)" 
-            data-3000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg)"
+            data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg);" 
+            data-3000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg);"
+            data-14000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg);"
+            data-14500="font-size: 0vw; transform: translate(-50%, -50%) rotate(720deg);"
         >world</div>
         <div class="s1-img1 fixed"
             data-3000="width: 200vw; transform: translate(-50%, -50%) rotate(0deg);"
@@ -115,6 +129,7 @@
             data-14000="width: 20vw; transform: translate(-50%, -50%) rotate(720deg);"
             data-14500="width: 95vw; transform: translate(-50%, -50%) rotate(720deg);"
         >
+        
             
             <div class="s1-img1-1">
                 <div 
@@ -207,6 +222,15 @@
                 ></div>
             </div>
         </div>
+        <div class="classImg"
+            data-0="display: none;"    
+            data-14500="width: 0; display: flex;"    
+            data-15000="width: 60%; display: flex;"    
+        ></div>
+        <div class="fixed"
+            data-0="display: none"
+            data-15000="display: flex; color: white; font-size: 90px"
+        >라인컴퓨터힉원 파이팅!</div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
