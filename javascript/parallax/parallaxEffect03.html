@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>패럴랙스</title>
     <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/DdangFonts/TangsBudaeJjigae.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -99,10 +100,12 @@
             background-repeat: no-repeat;
             width: 60%;
             height: 60%;
-            position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+        }
+        .comment {
+            font-family: "TangsBudaeJjigae";
         }
     </style>
 </head>
@@ -224,13 +227,13 @@
         </div>
         <div class="classImg"
             data-0="display: none;"    
-            data-14500="width: 0; display: flex;"    
-            data-15000="width: 60%; display: flex;"    
+            data-14500="transform: scale(0) translate(-50%, -50%); display: flex; position: fixed;"    
+            data-15000="transform: scale(1) translate(-50%, -50%); display: flex; position: fixed;"    
         ></div>
-        <div class="fixed"
+        <div class="comment fixed"
             data-0="display: none"
             data-15000="display: flex; color: white; font-size: 90px"
-        >라인컴퓨터힉원 파이팅!</div>
+        >라인컴퓨터학원 파이팅!</div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
