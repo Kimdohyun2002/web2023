@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript : 패럴랙스 효과</title>
+    <title>javascript : 슬라이드 효과</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
@@ -46,13 +46,58 @@
 
     <main id="main">
         <div class="container">
-            <div class="main__menu">
+            <div class="main__desc">
+                <h3>01. 패럴랙스 효과</h3>
+                <p>마우스를 따라다니는 기본적인 효과입니다.</p>
                 <ul>
-                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 상수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 배열 : 데이터 저장</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장</a></li>
+                    <li>forEach:배열의 각 요소에 대해 지정된 콜백 함수를 한 번씩 실행하는 배열 메서드입니다.</li>
+                    <li>window:전역 객체(Global Object)로서 브라우저 창을 나타내며, DOM(Document Object Model)과 BOM(Browser Object Model)을 포함하는 객체입니다.</li>
+                    <li>pageYOffset:현재 뷰포트(Viewport)에서 수직 방향으로 스크롤된 픽셀(pixel) 값을 반환하는 읽기 전용 속성입니다. 이 속성은 window 객체의 프로퍼티이며, 대부분의 모던 브라우저에서 지원됩니다.</li>
+                    <li>scrollY:현재 문서(Document)에서 수직 방향으로 스크롤된 픽셀(pixel) 값을 반환하는 읽기 전용 속성입니다. 이 속성은 window 객체의 프로퍼티이며, 대부분의 모던 브라우저에서 지원됩니다. pageYOffset과 동일한 값을 반환합니다.</li>
+                    <li>scrollTop:요소의 수직 방향으로 스크롤된 픽셀(pixel) 값을 설정하거나 반환하는 속성입니다.</li>
+                    <li>offsetTop:요소의 위치를 상위 요소를 기준으로 한 상대적인 수직 위치(pixel)를 반환하는 속성입니다.</li>
+                    <li>querySelector:CSS 선택자(CSS Selector)를 사용하여 문서 내에서 첫 번째로 일치하는 요소(Element)를 반환하는 메서드입니다. 이 메서드는 Document와 Element 객체의 메서드로 사용할 수 있으며, 대부분의 모던 브라우저에서 지원됩니다.</li>
+                    <li>querySelectorAll:CSS 선택자(CSS Selector)를 사용하여 문서 내에서 일치하는 모든 요소(NodeList)를 반환하는 메서드입니다. 이 메서드는 Document와 Element 객체의 메서드로 사용할 수 있습니다。</li>
+                    <li>classList:요소의 클래스(Class) 목록을 나타내는 DOMTokenList 객체를 반환하는 속성입니다. 이 객체는 add, remove, toggle 등의 메서드를 제공하여 클래스를 추가, 제거, 전환할 수 있습니다.</li>
+                    <li>addEventListener:객체에서 지정한 이벤트가 발생하면 특정 함수를 호출하는 메서드입니다.</li>
+                    <li>preventDefault:이벤트의 기본 동작을 취소하는 메서드입니다.</li>
+                    <li>getAttribute:요소의 지정된 속성(Attribute) 값을 반환하는 메서드입니다.</li>
+                    <li>getElementById:문서 내에서 지정된 ID를 가진 첫 번째 요소(Element)를 반환하는 메서드입니다.</li>
+                    <li>scrollIntoView:요소가 현재 뷰포트(Viewport) 내에 보이도록 스크롤하는 메서드입니다.</li>
+                    <li>parseInt:문자열(String)을 정수(Integer)로 변환하는 내장 함수(Built-in Function)입니다. 이 함수는 문자열의 첫 번째 문자부터 숫자를 읽어들여 해당하는 정수를 반환하며, 숫자 이외의 문자는 무시됩니다.</li>
+                    <li>entries:배열(Array)의 각 인덱스와 값을 포함하는 새로운 배열 반복자(Array Iterator) 객체를 반환하는 메서드입니다. 이 객체는 for...of 루프에서 사용될 수 있으며, [index, value] 형태의 배열을 반환합니다.</li>
                 </ul>
+                <a href="parallax/parallaxEffect01.html">확인하기</a>
+
+                <h3>02. 패럴랙스 효과</h3>
+                <p>마우스를 따라다니는 기본적인 효과입니다.</p>
+                <ul>
+                    <li>forEach:배열의 각 요소에 대해 지정된 콜백 함수를 한 번씩 실행하는 배열 메서드입니다.</li>
+                    <li>window:전역 객체(Global Object)로서 브라우저 창을 나타내며, DOM(Document Object Model)과 BOM(Browser Object Model)을 포함하는 객체입니다.</li>
+                    <li>pageYOffset :현재 뷰포트(Viewport)에서 수직 방향으로 스크롤된 픽셀(pixel) 값을 반환하는 읽기 전용 속성입니다. 이 속성은 window 객체의 프로퍼티이며, 대부분의 모던 브라우저에서 지원됩니다.</li>
+                    <li>scrollY:현재 문서(Document)에서 수직 방향으로 스크롤된 픽셀(pixel) 값을 반환하는 읽기 전용 속성입니다. 이 속성은 window 객체의 프로퍼티이며, 대부분의 모던 브라우저에서 지원됩니다. pageYOffset과 동일한 값을 반환합니다.</li>
+                    <li>querySelector:CSS 선택자(CSS Selector)를 사용하여 문서 내에서 첫 번째로 일치하는 요소(Element)를 반환하는 메서드입니다. 이 메서드는 Document와 Element 객체의 메서드로 사용할 수 있으며, 대부분의 모던 브라우저에서 지원됩니다.</li>
+                    <li>querySelectorAll:CSS 선택자(CSS Selector)를 사용하여 문서 내에서 일치하는 모든 요소(NodeList)를 반환하는 메서드입니다. 이 메서드는 Document와 Element 객체의 메서드로 사용할 수 있습니다。</li>
+                    <li>addEventListener:객체에서 지정한 이벤트가 발생하면 특정 함수를 호출하는 메서드입니다.</li>
+                    <li>preventDefault:이벤트의 기본 동작을 취소하는 메서드입니다.</li>
+                    <li>getAttribute:요소의 지정된 속성(Attribute) 값을 반환하는 메서드입니다.</li>
+                    <li>scrollIntoView:요소가 현재 뷰포트(Viewport) 내에 보이도록 스크롤하는 메서드입니다.</li>
+                    <li>add,remove:각각 배열(Set, Map 등에서)에 요소를 추가하거나 제거하는 메서드입니다.</li>
+                </ul>
+                <a href="parallax/parallaxEffect02.html">확인하기</a>
+                
+                <h3>03. 패럴랙스 효과</h3>
+                <p>마우스를 따라다니는 기본적인 효과입니다.</p>
+                <ul>
+                    <li>addEventListener</li>
+                    <li>querySelector</li>
+                    <li>parseInt,init</li>
+                    <li>window</li>
+                    <li>pageYOffset</li>
+                    <li>scrollY</li>
+                </ul>
+                <a href="parallax/parallaxEffect03.html">확인하기</a>
+
             </div>
         </div>
     </main>
