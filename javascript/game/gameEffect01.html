@@ -17,7 +17,7 @@
     </div>
     <header id="header">
         <h1>WEBS GAME WORLD</h1>
-        <div class="time">2023년 4월 24일 09시 30분 15초</div>
+        <div id="time">2023년 4월 24일 09시 30분 15초</div>
     </header>
 
     <main>
@@ -52,31 +52,47 @@
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse01.png")
+                $(".cursor img").attr("src", "img/game_mouse01.png");
+                $("#header").css("background-color","red");
             },
         });
         $(".icon2").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $(".cursor img").attr("src", "img/game_mouse02.png");
+                $("#header").css("background-color","blue");
             },
         });
         $(".icon3").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse03.png")
+                $(".cursor img").attr("src", "img/game_mouse03.png");
+                $("#header").css("background-color","green");
             },
         });
         $(".icon4").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse04.png")
+                $(".cursor img").attr("src", "img/game_mouse04.png");
+                $("#header").css("background-color","yellow");
             },
         });
 
-        document.querySelector(".icon1").addEventListener("click", () => {
-            document.querySelector("#header").style.background = "red";
-        });
+        function displayCurrentDateTime() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1; // getMonth()는 0부터 11까지의 값을 반환하므로 1을 더해줍니다.
+        const date = now.getDate();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const dateTimeString = `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`;
+        document.getElementById("time").innerHTML = dateTimeString;
+      }
+
+      // 페이지가 로드될 때마다 1초마다 현재 날짜와 시간을 업데이트합니다.
+      setInterval(displayCurrentDateTime, 1000);
+
 
         window.onload = function(){
             window.addEventListener("mousemove", e => {
