@@ -7,31 +7,32 @@
     <title>GAME Effect</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bg.css">
+    <link rel="stylesheet" href="css/bg2.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/music.css">
 </head>
     <body>
+        <div class="div">
+            <p class="m">responsive gif background</p>
+        </div>
         <main>
             <div class="context">
-                 <h1></h1>
-             </div>
-         
-         
-         <div class="area" >
-                     <ul class="circles">
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                             <li></li>
-                     </ul>
+                <h1></h1>
+            </div>
+            <div class="area">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
              </div >
         </main>
         <div class="cursor">
@@ -131,7 +132,7 @@
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse01.png");
-                $("#header").css("background-color","red");
+                $("#header").css("background-image", "linear-gradient(90deg, #2dffbf, #ff2020)")
             },
         });
         $(".icon2").draggable({
