@@ -4,93 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>웹디자인 기능사 실기 C-1</title>
     <style>
         * {
-            margin: 0;
             padding: 0;
-            color: #fff;
+            margin: 0;
         }
         #wrap {
+            display: flex;
             width: 1000px;
             height: 650px;
-            display: flex;
         }
         #aside {
-            width: 20%;
-            height: 650px;
-            background-color: #fa2a2a;
+            width: 200px;
         }
-        .nav {
-            height: 150px;
-            background-color: #faa4a4;
+        #aside .logo {
+            width: 100%;
+            height: 15%;
+            background-color: pink;
+        }
+        #aside .asidemin {
+            width: 100%;
+            height: 85%;
+            background-color: black;
         }
         #main {
-            width: 80%;
-            height: 650px;
-            background-color: #24ffab;
+            width: 800px;
         }
-        .slider {
+        #slider {
+            width: 100%;
             height: 350px;
-            background-color: #31ffff;
+            background-color: yellow;
         }
-        #contents {
+        #card {
             display: flex;
-        }
-        .cont1 {
-            width: 33.333%;
+            width: 100%;
             height: 200px;
-            background-color: #8822fc;
         }
-        .cont2 {
+        #card .card1 {
             width: 33.333%;
-            height: 200px;
-            background-color: #f14519;
+            height: 100%;
+            background-color: red;
         }
-        .cont3 {
+        #card .card2 {
             width: 33.333%;
-            height: 200px;
-            background-color: #aeff17;
+            height: 100%;
+            background-color: green;
+        }
+        #card .card3 {
+            width: 33.333%;
+            height: 100%;
+            background-color: skyblue;
         }
         #footer {
-            height: 100px;
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-        .foot1 {
-            width: 20%;
+            width: 100%;
             height: 100px;
-            background-color: #2230f5;
         }
-        .foot2 {
-            width: 80%;
-            height: 50px;
-            background-color: #fd208e;
+        #footer .foot1 {
+            width: 20%;
+            background-color: blue;
         }
-        .foot3 {
+        #footer .foot2 {
             width: 80%;
+        }
+        #footer .foot2 .footmin1 {
             height: 50px;
-            background-color: #ff0000;
+            background-color: brown;
+        }
+        #footer .foot2 .footmin2 {
+            height: 50px;
+            background-color: cadetblue;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="aside">
-            <div class="nav">로고</div>
+            <div class="logo"></div>
+            <div class="asidemin"></div>
         </div>
         <div id="main">
-            <div class="slider">이미지 슬라이드</div>
-            <div id="contents">
-                <div class="cont1">공지사항</div>
-                <div class="cont2">배너</div>
-                <div class="cont3">바로가기</div>
+            <div id="slider"></div>
+            <div id="card">
+                <div class="card1"></div>
+                <div class="card2"></div>
+                <div class="card3"></div>
             </div>
             <div id="footer">
-                <div class="foot1">로고</div>
-                <div class="foot2">하단 메뉴</div>
-                <div class="foot3">Copyright</div>
+                <div class="foot1"></div>
+                <div class="foot2">
+                    <div class="footmin1"></div>
+                    <div class="footmin2"></div>
+                </div>
             </div>
         </div>
     </div>

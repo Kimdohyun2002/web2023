@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 D-3</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0 auto;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 970px;
+        }
+        #aside {
+            width: 200px;
+            height: 850px;
+        }
+        #aside .logo {
+            width: 100%;
+            height: 15%;
+            background-color: black;
+        }
+        #aside .asidemin {
+            width: 100%;
+            height: 85%;
+            background-color: pink;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height: 850px;
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: red;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: yellow;
+        }
+        #article {
+            width: 100%;
+            height: 250px;
+            background-color: wheat;
+        }
+        #footer {
+            display: flex;
+            width: 100%;
+            height: 120px;
+        }
+        #footer .footlogo {
+            width: 200px;
+            height: 100%;
+            background-color: blue;
+        }
+        #footer .copyright {
+            width: calc(100% - 400px);
+            height: 100%;
+            background-color: yellow;
+        }
+        #footer .sns {
+            width: 200px;
+            height: 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="aside">
+            <div class="logo"></div>
+            <div class="asidemin"></div>
+        </div>
+        <div id="main">
+            <div id="slider"></div>
+            <div id="banner"></div>
+            <div id="article"></div>
+        </div>
+        <div id="footer">
+            <div class="footlogo"></div>
+            <div class="copyright"></div>
+            <div class="sns"></div>
+        </div>
+    </div>
+</body>
+</html>

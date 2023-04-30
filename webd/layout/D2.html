@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 D-2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #main {
+            display: flex;
+            width: 100%;
+            height: calc(100vh - 120px);
+            background-color: #000;
+        }
+        #aside {
+            width: 200px;
+            height: 100%;
+            background-color: pink;
+        }
+        #logo {
+            height: 200px;
+            background-color: yellow;
+        }
+        #section {
+            width: 400px;
+            height: 100%;
+            background-color: red;
+        }
+        #contents {
+            width: calc(100% - 600px);
+            background-color: blue;
+        }
+        #footer {
+            display: flex;
+            width: 100%;
+            height: 120px;
+            background-color: green;
+        }
+        #foot1 {
+            width: 200px;
+            background-color: black;
+        }
+        #foot2 {
+            width: calc(100% - 500px);
+            background-color: pink;
+        }
+        #foot3 {
+            width: 300px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <aside id="aside">
+                <div id="logo"></div>
+                <div id="aside1"></div>
+            </aside>
+            <section id="section"></section>
+            <div id="contents"></div>
+        </main>
+        <footer id="footer">
+            <div id="foot1"></div>
+            <div id="foot2"></div>
+            <div id="foot3"></div>
+        </footer>
+    </div>
+</body>
+</html>

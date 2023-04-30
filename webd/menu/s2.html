@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 이미지 슬라이드 유형 2번</title>
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            display: flex;
+            height: 100px;
+        }
+        #header .logo {
+            width: 20%;
+            background-color: pink;
+        }
+        #header .nav {
+            width: 80%;
+            background-color: green;
+        }
+        #banner {
+            width: 100%;
+        }
+        #contents {
+            display: flex;
+            height: 200px;
+        }
+        #contents .card1 {
+            width: 33.333%;
+            background-color: red;
+        }
+        #contents .card2 {
+            width: 33.333%;
+            background-color: blue;
+        }
+        #contents .card3 {
+            width: 33.333%;
+            background-color: yellow;
+        }
+        #footer {
+            display: flex;
+            height: 100px;
+        }
+        #footer .flogo {
+            width: 20%;
+            background-color: brown;
+        }
+        #footer .copyright {
+            width: 60%;
+            background-color: cyan;
+        }
+        #footer .sns {
+            width: 20%;
+            background-color: magenta;
+        }
+        .slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider__img { 
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .slider__inner { 
+            display: flex;
+            flex-wrap: wrap;
+            width: 3600px;
+            height: 300px
+        }
+        .slider { 
+            width: 1200px;
+            height: 300px
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">로고</div>
+            <div class="nav">메뉴</div>
+        </header>
+        <banner id="banner">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider__inner">
+                        <div class="slider"><img src="../img/Frame 1.jpg" alt="이미지1"></div>
+                        <div class="slider"><img src="../img/Frame 2.jpg" alt="이미지2"></div>
+                        <div class="slider"><img src="../img/Frame 1.jpg" alt="이미지3"></div>
+                        <div class="slider"><img src="../img/Frame 2.jpg" alt="이미지3"></div>
+                    </div>
+                </div>
+            </div>
+        </banner>
+        <contents id="contents">
+            <div class="card1"></div>
+            <div class="card2"></div>
+            <div class="card3"></div>
+        </contents>
+        <footer id="footer">
+            <div class="flogo"></div>
+            <div class="copyright"></div>
+            <div class="sns"></div>
+        </footer>
+    </div>
+    <script>
+        // 선택자
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img"); 
+        const sliderInner = sliderWrap.querySelector(".slider__inner");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        
+        sliderInner.style.transition = "all 0.4s";
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount;
+
+            sliderInner.style.transform = `translateX(${-1200 * currentIndex}px)`;
+        }, 3000);
+    </script>
+</body>
+</html>

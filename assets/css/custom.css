@@ -54,9 +54,6 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 #header{
 	background:#a5d5fa center 57px;
 	padding: 10px 0 10px 0px;
-	background-image: url(../img/backimg.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
 	width: 100%;
 }
 #header.sub {
