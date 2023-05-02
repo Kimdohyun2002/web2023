@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
 
 </head>
 <body>
@@ -42,10 +50,56 @@
     </header>
     <!-- //headerType -->
     <main id="mainType">
-        <section id="sliderType" class="nexon hide">
+        <section id="sliderType" class="nexon">
             <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">Loyal</span>
+                                    <h3 class="title">충성심</h3>
+                                    <p class="desc">보더콜리는 주인과의 유대관계를 매우 중요하게 생각하며, 충실하게 따르는 경향이 있습니다. 높은 지능과 민첩성을 지니고 있어서, 주인의 지시에 따라 다양한 일을 수행할 수 있습니다. 그러나 외로움을 잘 타기 때문에, 충분한 관심과 애정이 필요합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">Loyal</span>
+                                    <h3 class="title">충성심</h3>
+                                    <p class="desc">보더콜리는 주인과의 유대관계를 매우 중요하게 생각하며, 충실하게 따르는 경향이 있습니다. 높은 지능과 민첩성을 지니고 있어서, 주인의 지시에 따라 다양한 일을 수행할 수 있습니다. 그러나 외로움을 잘 타기 때문에, 충분한 관심과 애정이 필요합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">Loyal</span>
+                                    <h3 class="title">충성심</h3>
+                                    <p class="desc">보더콜리는 주인과의 유대관계를 매우 중요하게 생각하며, 충실하게 따르는 경향이 있습니다. 높은 지능과 민첩성을 지니고 있어서, 주인의 지시에 따라 다양한 일을 수행할 수 있습니다. 그러나 외로움을 잘 타기 때문에, 충분한 관심과 애정이 필요합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">Loyal</span>
                         <h3 class="title">충성심</h3>
@@ -65,7 +119,7 @@
                     <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
                     <a href="#" class="play"><span class="blind">플레이</span></a>
                     <a href="#" class="stop"><span class="blind">정지</span></a>
-                </div>
+                </div> -->
             </div>
                 <!-- <div class="slider"></div>
                 <div class="slider"></div> -->
@@ -281,5 +335,22 @@
         </div>
     </footer>
     <!-- //footer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>

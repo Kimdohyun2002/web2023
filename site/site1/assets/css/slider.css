@@ -7,6 +7,15 @@
     position: relative;
     z-index: 1;
 }
+.slider__inner .slider.img1 {
+    background-image: url(../img/slider-TYPE01@2x-min.jpg);
+}
+.slider__inner .slider.img2 {
+    background-image: url(../img/slider-TYPE02@2x-min.jpg);
+}
+.slider__inner .slider.img3 {
+    background-image: url(../img/slider-TYPE03@2x-min.jpg);
+}
 .slider__inner .slider::after {
     content: '';
     width: 100%;
@@ -117,6 +126,21 @@
         }
     }
 
+/* swiper */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 30px;
+    height: 56px;
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+}
+.swiper-button-next {
+    background-position: -52px 0;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 0;
+}
 
 /* 미디어쿼리 */
 @media (max-width: 960px){
