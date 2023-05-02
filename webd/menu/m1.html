@@ -172,36 +172,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        // $(".nav > ul > li").mouseover(function(){
-        //     $(this).find(".submenu").stop().slideDown();
-        //     $(".nav > ul").find(".submenu").stop().slideDown();
-        // });
-        // $(".nav > ul > li").mouseout(function(){
-        //     $(this).find(".submenu").stop().slideUp();
-        //     $(".nav > ul").find(".submenu").stop().slideUp();
-        // });
+        $(".nav > ul > li").mouseover(function(){
+            $(this).find(".submenu").stop().slideDown();
+            $(".nav > ul").find(".submenu").stop().slideDown();
+        });
+        $(".nav > ul > li").mouseout(function(){
+            $(this).find(".submenu").stop().slideUp();
+            $(".nav > ul").find(".submenu").stop().slideUp();
+        });
 
-        // document.querySelectorAll(".nav > ul > li").forEach(li => {
-        //     li.addEventListener("mouseover", () => {
+        document.querySelectorAll(".nav > ul > li").forEach(li => {
+            li.addEventListener("mouseover", () => {
                 
-        //     });
-        // });
-    </script>
-    <script>
-        const menuItems = document.querySelectorAll('.nav > ul > li');
-
-        menuItems.forEach(menuItem => {
-        const submenu = menuItem.querySelector('.submenu');
-        
-        if (submenu) {
-            const menuLink = menuItem.querySelector('a');
-            menuLink.addEventListener('mouseenter', () => {
-            submenu.style.display = 'block';
             });
-            menuLink.addEventListener('mouseleave', () => {
-            submenu.style.display = 'none';
-            });
-        }
         });
     </script>
 </body>

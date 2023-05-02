@@ -13,7 +13,8 @@
 <path d="M109 14H105C103.874 14 102.836 14.3719 102 14.9996M91 24H95C96.1256 24 97.1643 23.6281 98 23.0004" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M91 14H95C97.7614 14 100 16.2386 100 19C100 21.7614 102.239 24 105 24H109" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M147 28L137 20L147 12V28Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M133 27V13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M335.101 24.8995L345 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M335 15L344.899 24.8995" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M176 12L186 20L176 28V12Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M217 27V13" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M223 27V13" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

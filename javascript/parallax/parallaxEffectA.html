@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스</title>
+    <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/DdangFonts/TangsBudaeJjigae.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "ReciaSerifDisplay";
+        }
+        body {
+            height: 20000px;
+            background-color: #E0E4DD;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            font-size: 30vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vw;
+
+        }
+        .s1-img1 {
+            width: 200vw;
+            height: 100vh;
+        }
+        /* .s1-img1 > div:nth-child(1) {padding: 0 40vh;}
+        .s1-img1 > div:nth-child(2) {padding: 0 30vh;}
+        .s1-img1 > div:nth-child(3) {padding: 0 20vh;}
+        .s1-img1 > div:nth-child(4) {padding: 0 10vh;}
+        .s1-img1 > div:nth-child(5) {padding: 0 0vh;}  */
+        .s1-img1 > div {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .s1-img1 > div > div {
+            width: 19vh;
+            height: 19vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+            filter: saturate(0%);
+        }
+        .s1-img1-1 > div:first-child {
+            background-image: url(https://source.unsplash.com/500x500/?pink);}
+        .s1-img1-1 > div:last-child {
+            background-image: url(https://source.unsplash.com/500x500/?red);}
+        .s1-img1-2 > div:first-child {
+            background-image: url(https://source.unsplash.com/500x500/?blue);}
+        .s1-img1-2 > div:last-child {
+            background-image: url(https://source.unsplash.com/500x500/?magenta);}
+        .s1-img1-3 > div:first-child {
+            background-image: url(https://source.unsplash.com/500x500/?green);}
+        .s1-img1-3 > div:last-child {
+            background-image: url(https://source.unsplash.com/500x500/?black);}
+        .s1-img1-4 > div:first-child {
+            background-image: url(https://source.unsplash.com/500x500/?orange);}
+        .s1-img1-4 > div:last-child {
+            background-image: url(https://source.unsplash.com/500x500/?yellow);}
+        .s1-img1-5 > div:first-child {
+            background-image: url(https://source.unsplash.com/500x500/?white);}
+        .s1-img1-5 > div:last-child {
+            background-image: url(https://source.unsplash.com/500x500/?sepia);}
+        .classImg {
+            background-image: url(img/IMG_3623.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 60%;
+            height: 60%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .comment {
+            font-family: "TangsBudaeJjigae";
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+
+    <section id="section1">
+        <div class="s1-text1 fixed" 
+            data-0="font-size: 0vw; opacity: 1" 
+            data-1000="font-size: 30vw; opacity: 1"
+            data-2000="font-size: 30vw; opacity: 1"
+            data-3000="font-size: 0vw; opacity: 0"
+        >hello</div>
+        <div class="s1-text2 fixed" 
+            data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg);" 
+            data-3000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg);"
+            data-14000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg);"
+            data-14500="font-size: 0vw; transform: translate(-50%, -50%) rotate(720deg);"
+        >world</div>
+        <div class="s1-img1 fixed"
+            data-3000="width: 200vw; transform: translate(-50%, -50%) rotate(0deg);"
+            data-5000="width: 20vw; transform: translate(-50%, -50%) rotate(720deg);"
+            data-12500="width: 20vw; transform: translate(-50%, -50%) rotate(720deg);"
+            data-14000="width: 20vw; transform: translate(-50%, -50%) rotate(720deg);"
+            data-14500="width: 95vw; transform: translate(-50%, -50%) rotate(720deg);"
+        >
+        
+            
+            <div class="s1-img1-1">
+                <div 
+                    data-5000="opacity: 1; border-radius: 0px;"
+                    data-6000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+                <div
+                    data-6000="opacity: 1; border-radius: 0px;"
+                    data-7000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+            </div>
+            <div class="s1-img1-2">
+                <div
+                    data-8000="opacity: 1; border-radius: 0px;"
+                    data-9000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+                <div
+                    data-9000="opacity: 1; border-radius: 0px;"
+                    data-10000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+            </div>
+            <div class="s1-img1-3">
+                <div
+                    data-7000="opacity: 1; border-radius: 0px;"
+                    data-8000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+                <div
+                    data-8000="opacity: 1; border-radius: 0px;"
+                    data-9000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+            </div>
+            <div class="s1-img1-4">
+                <div
+                    data-8000="opacity: 1; border-radius: 0px;"
+                    data-9000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+                <div
+                    data-9000="opacity: 1; border-radius: 0px;"
+                    data-10000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+            </div>
+            <div class="s1-img1-5">
+                <div
+                    data-6000="opacity: 1; border-radius: 0px;"
+                    data-7000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+                <div
+                    data-5000="opacity: 1; border-radius: 0px;"
+                    data-6000="opacity: 0; border-radius: 0px;"
+                    data-11000="opacity: 0; border-radius: 0px;"
+                    data-12000="opacity: 1; border-radius: 0px;"
+                    data-12500="opacity: 1; border-radius: 0px; filter: saturate(0%);"
+                    data-13000="opacity: 1; border-radius: 50%; filter: saturate(100%);"
+                ></div>
+            </div>
+        </div>
+        <div class="classImg"
+            data-0="display: none;"    
+            data-14500="transform: scale(0) translate(-50%, -50%); display: flex; position: fixed;"    
+            data-15000="transform: scale(1) translate(-50%, -50%); display: flex; position: fixed;"    
+        ></div>
+        <div class="comment fixed"
+            data-0="display: none"
+            data-15000="display: flex; color: white; font-size: 90px"
+        >라인컴퓨터학원 파이팅!</div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    
+    <script type="text/javascript">
+        let s = skrollr.init();
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY;
+            
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+        });
+    </script>
+</body>
+</html>
