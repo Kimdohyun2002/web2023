@@ -2,7 +2,7 @@
 a{
   text-decoration:none
 }
-.bgimg{
+.header{
   position:relative;
   overflow:hidden;
   display:flex;
@@ -16,7 +16,7 @@ a{
   min-width:300px;
   color:#eee;
 }
-.bgimg:after{
+.header:after{
   content:"";
   width:100%;
   height:100%;
@@ -26,7 +26,7 @@ a{
   z-index:-1;
  background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
 }
-.bgimg:before{
+.header:before{
   content:"";
   width:100%;
   height:200%;
@@ -44,7 +44,7 @@ a{
   transition:all 0.4s ease-in-out;
   z-index:-2
 }
-.bgimg a{
+.header a{
   color:#eee
 }
 .menu{
