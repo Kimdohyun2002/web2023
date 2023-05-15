@@ -1,135 +1,867 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
-a{
-  text-decoration:none
-}
-.bgimg{
-  position:relative;
-  overflow:hidden;
-  display:flex;
+#app {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  height:50vw;
-  min-height:400px;
-  max-height:550px;
-  min-width:300px;
-  color:#eee;
-}
-.bgimg:after{
-  content:"";
-  width:100%;
-  height:100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  z-index:-1;
- background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
-}
-.bgimg:before{
-  content:"";
-  width:100%;
-  height:200%;
-  position:absolute;
-  top:0;
-  left:0;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0); backface-visibility: hidden;
-  scale(1.0, 1.0);
-    transform: translateZ(0);
-  background:#1B2030 url(https://images.unsplash.com/photo-1571993142257-eae0b44cf0f1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ) 50% 0 no-repeat;
-  background-size:100%;
-  background-attachment:fixed;
-  animation: grow 360s  linear 10ms infinite;
-  transition:all 0.4s ease-in-out;
-  z-index:-2
-}
-.bgimg a{
-  color:#eee
-}
-.menu{
-  display:block;
-  width:40px;
-  height:30px;
-  border:2px solid #fff;
-  border-radius:3px;
-  position:absolute;
-  right:20px;
-  top:20px;
-  text-decoration:none
-}
-.menu:after{
-  content:"";
-  display:block;
-  width:20px;
-  height:3px;
-  background:#fff;
-  position:absolute;
-  margin:0 auto;
-  top:5px;
-  left:0;
-  right:0;
-  box-shadow:0 8px, 0 16px
-}
-.logo{
-  border:2px solid #fff;
-  border-radius:3px;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  align-content:center;
-  margin:20px;
-  padding:0px 10px;
-  font-weight:900;
-  font-size:1.1em;
-  line-height:1;
-  box-sizing:border-box;
-  height:40px
-}
-.sides, .info{
-  flex: 0 0 auto;
-  width:50%
-}
-.info{
-  width:100%;
-  padding:15% 10% 0 10%;
-  text-align:center;
-  text-shadow:0 2px 3px rgba(0,0,0,0.2)
-}
-.author{
-  display:inline-block;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  background:url(https://i.imgur.com/6DLCsZcb.jpg) center no-repeat;
-  background-size:cover;
-  box-shadow:0 2px 3px rgba(0,0,0,0.3);
-  margin-bottom:3px
-}
-.info h4, .meta{
-  font-size:0.7em
-}
-.meta{
-  font-style:italic;
-}
-@keyframes grow{
-  0% { transform: scale(1) translateY(0px)}
-  50% { transform: scale(1.2) translateY(-400px)}
-}
-.content{  
-  padding:5% 10%;
-  text-align:justify
-}
-.btn{
-  color:#333;
-  border:2px solid;
-  border-radius:3px;
-  text-decoration:none;
-  display:inline-block;
-  padding:5px 10px;
-  font-weight:600
 }
 
-.twtr{
-  margin-top:100px
-}.btn.twtr:after{content:"\1F426";padding-left:5px}
+.MochiShiba path,
+.MochiPaws path {
+  fill: none;
+  stroke: none;
+  stroke-width: 1.2;
+  stroke-miterlimit: 10;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.MochiShiba .thin,
+.MochiPaws .thin {
+  stroke-width: 0.8;
+}
+.MochiShiba #eyes path,
+.MochiPaws #eyes path {
+  stroke-width: 2;
+}
+.MochiShiba .fur,
+.MochiPaws .fur {
+  fill: #dd9e47;
+}
+.MochiShiba .fur2,
+.MochiPaws .fur2 {
+  fill: white;
+}
+.MochiShiba .inner,
+.MochiPaws .inner {
+  fill: white;
+}
+.MochiShiba .outline,
+.MochiPaws .outline {
+  stroke: #4e2e0f;
+}
+.MochiShiba .nose,
+.MochiShiba .eye,
+.MochiPaws .nose,
+.MochiPaws .eye {
+  fill: #3c2012;
+}
+.MochiShiba .gleam,
+.MochiPaws .gleam {
+  fill: white;
+}
+.MochiShiba #laugh .eye,
+.MochiPaws #laugh .eye {
+  fill: none;
+}
+.MochiShiba .tongue,
+.MochiPaws .tongue {
+  fill: #f2a3ad;
+}
+.MochiShiba .drool,
+.MochiPaws .drool {
+  fill: #41b5dd;
+}
+.MochiShiba .scarf,
+.MochiPaws .scarf {
+  fill: #002a57;
+}
+.MochiShiba .logo,
+.MochiPaws .logo {
+  fill: white;
+}
+.MochiShiba #cheeks .right,
+.MochiPaws #cheeks .right {
+  fill: url(#cheeks);
+}
+.MochiShiba #cheeks .left,
+.MochiPaws #cheeks .left {
+  fill: url(#cheeks-2);
+}
+
+.MochiShiba #cheeks {
+  visibility: hidden;
+}
+.MochiShiba #ears #left1,
+.MochiShiba #ears #right2,
+.MochiShiba #ears #left3,
+.MochiShiba #ears #right3 {
+  visibility: hidden;
+}
+.MochiShiba #eyes #wink,
+.MochiShiba #eyes #shy,
+.MochiShiba #eyes #laugh,
+.MochiShiba #eyes .gleam {
+  visibility: hidden;
+}
+.MochiShiba #brows #expecting {
+  visibility: hidden;
+}
+.MochiShiba [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba [id^=mouth1] {
+  visibility: visible;
+}
+.MochiShiba #base #outline2,
+.MochiShiba #base #outline3 {
+  visibility: hidden;
+}
+.MochiShiba #base #top2,
+.MochiShiba #base #top3 {
+  visibility: hidden;
+}
+
+.MochiShiba.blush #cheeks {
+  visibility: visible;
+}
+.MochiShiba.content [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.happy [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.happy #mouth2 {
+  visibility: visible;
+}
+.MochiShiba.excited [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.excited #mouth3 {
+  visibility: visible;
+}
+.MochiShiba.cute #brows #expecting {
+  visibility: visible;
+}
+.MochiShiba.cute #brows #focussed {
+  visibility: hidden;
+}
+.MochiShiba.cute [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.cute #mouth4 {
+  visibility: visible;
+}
+.MochiShiba.drool [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.drool #mouth5 {
+  visibility: visible;
+}
+.MochiShiba.cheeky [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.cheeky #mouth6 {
+  visibility: visible;
+}
+.MochiShiba.gleam #brows #expecting {
+  visibility: visible;
+}
+.MochiShiba.gleam #brows #focussed {
+  visibility: hidden;
+}
+.MochiShiba.gleam #snout {
+  transform: translateY(-3%);
+}
+.MochiShiba.gleam #brows {
+  transform: translateY(-5%);
+}
+.MochiShiba.gleam #eyes {
+  transform: translateY(-4.5%);
+}
+.MochiShiba.gleam #eyes #open .eye.left {
+  transform: matrix(0.7, -0.7, 0.7, 0.7, -31.2, 54.3) scale(1.2);
+}
+.MochiShiba.gleam #eyes #open .eye.right {
+  transform: translate(-27.5px, 83px) rotate(-42.36deg) scale(1.2);
+}
+.MochiShiba.gleam #cheeks {
+  transform: translateY(-4%);
+}
+.MochiShiba.gleam [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.gleam #mouth1 {
+  visibility: visible;
+}
+.MochiShiba.ears #ears > g {
+  visibility: hidden;
+}
+.MochiShiba.ears.l1 #ears > #left1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2 #ears > #left2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3 #ears > #left3 {
+  visibility: visible;
+}
+.MochiShiba.ears.l4 #ears > #left4 {
+  visibility: visible;
+}
+.MochiShiba.ears.r1 #ears > #right1 {
+  visibility: visible;
+}
+.MochiShiba.ears.r2 #ears > #right2 {
+  visibility: visible;
+}
+.MochiShiba.ears.r3 #ears > #right3 {
+  visibility: visible;
+}
+.MochiShiba.ears.r4 #ears > #right4 {
+  visibility: visible;
+}
+.MochiShiba.ears #base [id^=outline],
+.MochiShiba.ears #base [id^=top] {
+  visibility: hidden;
+}
+.MochiShiba.ears.l1.r1 #base #outline2,
+.MochiShiba.ears.l1.r1 #base #top2, .MochiShiba.ears.l4.r4 #base #outline2,
+.MochiShiba.ears.l4.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l1.r2 #base #outline1,
+.MochiShiba.ears.l1.r2 #base #top2, .MochiShiba.ears.l1.r4 #base #outline1,
+.MochiShiba.ears.l1.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l1.r3 #base #outline3,
+.MochiShiba.ears.l1.r3 #base #top3 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2.r1 #base #outline1,
+.MochiShiba.ears.l2.r1 #base #top1, .MochiShiba.ears.l4.r1 #base #outline1,
+.MochiShiba.ears.l4.r1 #base #top1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2.r2 #base #outline1,
+.MochiShiba.ears.l2.r2 #base #top2, .MochiShiba.ears.l4.r2 #base #outline1,
+.MochiShiba.ears.l4.r2 #base #top2, .MochiShiba.ears.l2.r4 #base #outline1,
+.MochiShiba.ears.l2.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2.r3 #base #outline3,
+.MochiShiba.ears.l2.r3 #base #top3, .MochiShiba.ears.l4.r3 #base #outline3,
+.MochiShiba.ears.l4.r3 #base #top3 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r1 #base #outline2,
+.MochiShiba.ears.l3.r1 #base #top1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r2 #base #outline1,
+.MochiShiba.ears.l3.r2 #base #top1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r4 #base #outline1,
+.MochiShiba.ears.l3.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r3 #base #outline3,
+.MochiShiba.ears.l3.r3 #base #top3 {
+  visibility: visible;
+}
+.MochiShiba.eyes #eyes .eye {
+  visibility: hidden;
+}
+.MochiShiba.eyes.open #open .eye.left, .MochiShiba.eyes.lopen #open .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.open #open .eye.right, .MochiShiba.eyes.ropen #open .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.wink #wink .eye.left, .MochiShiba.eyes.lwink #wink .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.wink #wink .eye.right, .MochiShiba.eyes.rwink #wink .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.laugh #laugh .eye.left, .MochiShiba.eyes.llaugh #laugh .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.laugh #laugh .eye.right, .MochiShiba.eyes.rlaugh #laugh .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.shy #shy .eye.left, .MochiShiba.eyes.lshy #shy .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.shy #shy .eye.right, .MochiShiba.eyes.rshy #shy .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.open.gleam #open .gleam, .MochiShiba.eyes.lopen.gleam #open .gleam.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.ropen.gleam #open .gleam.right {
+  visibility: visible;
+}
+
+.ume .fur {
+  fill: white;
+}
+.ume .fur2 {
+  fill: white;
+}
+.ume .inner {
+  fill: #f9c7bd;
+}
+.ume #brows .fur2 {
+  fill: #f7d6b9;
+}
+.ume .scarf {
+  fill: #b3122d;
+}
+
+.sesame .outline {
+  stroke: #3c2012;
+}
+.sesame .fur {
+  fill: #140d0b;
+}
+.sesame .fur2 {
+  fill: #e8c6ac;
+}
+.sesame .inner {
+  fill: #e8c6ac;
+}
+
+.monaka .fur {
+  fill: #d7b087;
+}
+.monaka .scarf {
+  fill: #6b9dc4;
+}
+
+.sakura .fur {
+  fill: #fcdacd;
+}
+.sakura .inner {
+  fill: #f1aeb3;
+}
+.sakura .scarf {
+  fill: #f2a3ad;
+}
+
+.kinako .fur {
+  fill: #fdecc0;
+}
+.kinako .scarf {
+  fill: #356320;
+}
+
+.anko .fur {
+  fill: #ac8569;
+}
+.anko .scarf {
+  fill: #356320;
+}
+
+.tuna .outline {
+  stroke: #3c2012;
+}
+.tuna .fur {
+  fill: #603d1e;
+}
+.tuna .fur2 {
+  fill: #fad4af;
+}
+.tuna .inner {
+  fill: #fad4af;
+}
+.tuna .eye {
+  fill: #3c2012;
+}
+
+.MochiBox.pop .paws, .MochiBox:hover .paws, .MochiBox:active .paws, .MochiBox:focus .paws {
+  animation: paw-pop 0.3s ease 1 both;
+}
+.MochiBox.pop .shiba, .MochiBox:hover .shiba, .MochiBox:active .shiba, .MochiBox:focus .shiba {
+  animation: shiba-pop 1s ease 1 both;
+}
+
+.MochiBox {
+  min-width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  border-radius: 20px;
+  user-select: none;
+  z-index: 0;
+  transform: scale(0.75);
+  margin-left: -10px;
+  margin-right: -20px;
+  margin-top: -30px;
+  margin-bottom: -10px;
+  padding-top: 120px;
+  overflow: hidden;
+}
+.MochiBox .MochiShiba {
+  z-index: 0;
+}
+.MochiBox .MochiPaws {
+  z-index: 2;
+}
+.MochiBox:hover, .MochiBox:active, .MochiBox:focus {
+  outline: none;
+}
+.MochiBox:hover .MochiContent, .MochiBox:active .MochiContent, .MochiBox:focus .MochiContent {
+  border-color: #5f3d1e;
+}
+.MochiBox .MochiContent {
+  z-index: 1;
+  position: relative;
+  min-width: 200px;
+  min-height: 30px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #f0e0d1;
+  border-radius: 20px;
+  transition: border 0.5s ease;
+}
+
+.MochiShiba,
+.MochiPaws {
+  position: absolute;
+  left: 12.5%;
+  top: 0;
+  pointer-events: none;
+  width: 75%;
+  max-width: 200px;
+}
+.MochiShiba.small,
+.MochiPaws.small {
+  max-width: 100px;
+}
+.MochiShiba.large,
+.MochiPaws.large {
+  max-width: 300px;
+}
+.MochiShiba .shiba,
+.MochiPaws .shiba {
+  width: 100%;
+  height: auto;
+  transform: translateY(-54%);
+  animation: shiba-hide 0.5s ease 1 both;
+  transform-origin: bottom center;
+}
+.MochiShiba .paws,
+.MochiPaws .paws {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translateY(-60%);
+  animation: paw-hide 0.25s ease 1 both;
+}
+
+@keyframes paw-hide {
+  0% {
+    transform: translateY(98px) scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(92px) scale(0.9);
+  }
+}
+@keyframes paw-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(110px) scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(90px);
+  }
+  100% {
+    transform: translateY(98px) scaleY(1);
+  }
+}
+@keyframes shiba-hide {
+  0% {
+    opacity: 1;
+    transform: translateY(6%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40%) scale(0.5);
+  }
+}
+@keyframes shiba-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(40%) scale(0.5);
+  }
+  22% {
+    opacity: 1;
+    transform: translateY(20%) scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0%) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(6%) scale(1.01);
+  }
+}
+@keyframes shiba-wink-open {
+  0% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shiba-wink-closed {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.MochiBox:nth-of-type(1) .paws,
+.MochiBox:nth-of-type(1) .shiba {
+  animation-delay: 0.05s !important;
+}
+
+.MochiBox:nth-of-type(2) .paws,
+.MochiBox:nth-of-type(2) .shiba {
+  animation-delay: 0.1s !important;
+}
+
+.MochiBox:nth-of-type(3) .paws,
+.MochiBox:nth-of-type(3) .shiba {
+  animation-delay: 0.15s !important;
+}
+
+.MochiBox:nth-of-type(4) .paws,
+.MochiBox:nth-of-type(4) .shiba {
+  animation-delay: 0.2s !important;
+}
+
+.MochiBox:nth-of-type(5) .paws,
+.MochiBox:nth-of-type(5) .shiba {
+  animation-delay: 0.25s !important;
+}
+
+.MochiBox:nth-of-type(6) .paws,
+.MochiBox:nth-of-type(6) .shiba {
+  animation-delay: 0.3s !important;
+}
+
+.MochiBox:nth-of-type(7) .paws,
+.MochiBox:nth-of-type(7) .shiba {
+  animation-delay: 0.35s !important;
+}
+
+.MochiBox:nth-of-type(8) .paws,
+.MochiBox:nth-of-type(8) .shiba {
+  animation-delay: 0.4s !important;
+}
+
+.MochiBox:nth-of-type(9) .paws,
+.MochiBox:nth-of-type(9) .shiba {
+  animation-delay: 0.45s !important;
+}
+
+.MochiBox:nth-of-type(10) .paws,
+.MochiBox:nth-of-type(10) .shiba {
+  animation-delay: 0.5s !important;
+}
+
+.MochiBox:nth-of-type(11) .paws,
+.MochiBox:nth-of-type(11) .shiba {
+  animation-delay: 0.55s !important;
+}
+
+.MochiBox:nth-of-type(12) .paws,
+.MochiBox:nth-of-type(12) .shiba {
+  animation-delay: 0.6s !important;
+}
+
+.MochiBox:nth-of-type(13) .paws,
+.MochiBox:nth-of-type(13) .shiba {
+  animation-delay: 0.65s !important;
+}
+
+.MochiBox:nth-of-type(14) .paws,
+.MochiBox:nth-of-type(14) .shiba {
+  animation-delay: 0.7s !important;
+}
+
+.MochiBox:nth-of-type(15) .paws,
+.MochiBox:nth-of-type(15) .shiba {
+  animation-delay: 0.75s !important;
+}
+
+.MochiBox:nth-of-type(16) .paws,
+.MochiBox:nth-of-type(16) .shiba {
+  animation-delay: 0.8s !important;
+}
+
+.MochiBox:nth-of-type(17) .paws,
+.MochiBox:nth-of-type(17) .shiba {
+  animation-delay: 0.85s !important;
+}
+
+.MochiBox:nth-of-type(18) .paws,
+.MochiBox:nth-of-type(18) .shiba {
+  animation-delay: 0.9s !important;
+}
+
+.MochiBox:nth-of-type(19) .paws,
+.MochiBox:nth-of-type(19) .shiba {
+  animation-delay: 0.95s !important;
+}
+
+.MochiBox:nth-of-type(20) .paws,
+.MochiBox:nth-of-type(20) .shiba {
+  animation-delay: 1s !important;
+}
+
+.MochiBox:nth-of-type(21) .paws,
+.MochiBox:nth-of-type(21) .shiba {
+  animation-delay: 1.05s !important;
+}
+
+.MochiBox:nth-of-type(22) .paws,
+.MochiBox:nth-of-type(22) .shiba {
+  animation-delay: 1.1s !important;
+}
+
+.MochiBox:nth-of-type(23) .paws,
+.MochiBox:nth-of-type(23) .shiba {
+  animation-delay: 1.15s !important;
+}
+
+.MochiBox:nth-of-type(24) .paws,
+.MochiBox:nth-of-type(24) .shiba {
+  animation-delay: 1.2s !important;
+}
+
+.MochiBox:nth-of-type(25) .paws,
+.MochiBox:nth-of-type(25) .shiba {
+  animation-delay: 1.25s !important;
+}
+
+.MochiBox:nth-of-type(26) .paws,
+.MochiBox:nth-of-type(26) .shiba {
+  animation-delay: 1.3s !important;
+}
+
+.MochiBox:nth-of-type(27) .paws,
+.MochiBox:nth-of-type(27) .shiba {
+  animation-delay: 1.35s !important;
+}
+
+.MochiBox:nth-of-type(28) .paws,
+.MochiBox:nth-of-type(28) .shiba {
+  animation-delay: 1.4s !important;
+}
+
+.MochiBox:nth-of-type(29) .paws,
+.MochiBox:nth-of-type(29) .shiba {
+  animation-delay: 1.45s !important;
+}
+
+.MochiBox:nth-of-type(30) .paws,
+.MochiBox:nth-of-type(30) .shiba {
+  animation-delay: 1.5s !important;
+}
+
+.MochiBox:nth-of-type(31) .paws,
+.MochiBox:nth-of-type(31) .shiba {
+  animation-delay: 1.55s !important;
+}
+
+.MochiBox:nth-of-type(32) .paws,
+.MochiBox:nth-of-type(32) .shiba {
+  animation-delay: 1.6s !important;
+}
+
+.MochiBox:nth-of-type(33) .paws,
+.MochiBox:nth-of-type(33) .shiba {
+  animation-delay: 1.65s !important;
+}
+
+.MochiBox:nth-of-type(34) .paws,
+.MochiBox:nth-of-type(34) .shiba {
+  animation-delay: 1.7s !important;
+}
+
+.MochiBox:nth-of-type(35) .paws,
+.MochiBox:nth-of-type(35) .shiba {
+  animation-delay: 1.75s !important;
+}
+
+.MochiBox:nth-of-type(36) .paws,
+.MochiBox:nth-of-type(36) .shiba {
+  animation-delay: 1.8s !important;
+}
+
+.MochiBox:nth-of-type(37) .paws,
+.MochiBox:nth-of-type(37) .shiba {
+  animation-delay: 1.85s !important;
+}
+
+.MochiBox:nth-of-type(38) .paws,
+.MochiBox:nth-of-type(38) .shiba {
+  animation-delay: 1.9s !important;
+}
+
+.MochiBox:nth-of-type(39) .paws,
+.MochiBox:nth-of-type(39) .shiba {
+  animation-delay: 1.95s !important;
+}
+
+.MochiBox:nth-of-type(40) .paws,
+.MochiBox:nth-of-type(40) .shiba {
+  animation-delay: 2s !important;
+}
+
+.MochiBox:nth-of-type(41) .paws,
+.MochiBox:nth-of-type(41) .shiba {
+  animation-delay: 2.05s !important;
+}
+
+.MochiBox:nth-of-type(42) .paws,
+.MochiBox:nth-of-type(42) .shiba {
+  animation-delay: 2.1s !important;
+}
+
+.MochiBox:nth-of-type(43) .paws,
+.MochiBox:nth-of-type(43) .shiba {
+  animation-delay: 2.15s !important;
+}
+
+.MochiBox:nth-of-type(44) .paws,
+.MochiBox:nth-of-type(44) .shiba {
+  animation-delay: 2.2s !important;
+}
+
+.MochiBox:nth-of-type(45) .paws,
+.MochiBox:nth-of-type(45) .shiba {
+  animation-delay: 2.25s !important;
+}
+
+.MochiBox:nth-of-type(46) .paws,
+.MochiBox:nth-of-type(46) .shiba {
+  animation-delay: 2.3s !important;
+}
+
+.MochiBox:nth-of-type(47) .paws,
+.MochiBox:nth-of-type(47) .shiba {
+  animation-delay: 2.35s !important;
+}
+
+.MochiBox:nth-of-type(48) .paws,
+.MochiBox:nth-of-type(48) .shiba {
+  animation-delay: 2.4s !important;
+}
+
+.MochiBox:nth-of-type(49) .paws,
+.MochiBox:nth-of-type(49) .shiba {
+  animation-delay: 2.45s !important;
+}
+
+.MochiBox:nth-of-type(50) .paws,
+.MochiBox:nth-of-type(50) .shiba {
+  animation-delay: 2.5s !important;
+}
+
+body {
+  color: #5f3d1e;
+  background: #fdfbee;
+  padding: 20px;
+  font-family: "Baloo", cursive;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 5px 0 0;
+  font-weight: 600;
+  font-family: "Kosugi Maru";
+}
+
+h3 {
+  font-size: 32px;
+  margin: 0 0 5px;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  line-height: 0.8;
+}
+
+p,
+h1 {
+  margin: 5px 0;
+}
+
+h1 {
+  line-height: 0.7;
+}
+
+p.shop {
+  background: #002a57;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-family: "Kosugi Maru";
+  padding: 3px 6px;
+}
+p.shop.uemachi {
+  background: #356320;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a.show, a:hover {
+  color: #002a57;
+}
+
+.sub {
+  font-family: Arial;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+button {
+  color: #301d0b;
+  margin-top: 50px;
+  background: #c2ab96;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-family: monaco, consolas, "courier new", monospace;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #5f3d1e;
+}
+
+* {
+  box-sizing: border-box;
+}

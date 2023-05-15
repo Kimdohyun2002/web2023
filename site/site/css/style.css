@@ -1,0 +1,240 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    vertical-align: top;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* header */
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: #2e269e;
+    display: flex;
+    z-index: 1000;
+}
+#header .logo {
+    width: 20%;
+}
+#header .logo a {
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+    padding: 30px 40px;
+}
+#header .nav {
+    width: 80%;
+    text-align: right;
+}
+#header .nav > ul {
+    margin-top: 25px;
+}
+#header .nav > ul > li {
+    display: inline-block;
+    position: relative;
+}
+#header .nav > ul > li > a {
+    color: #fff;
+    padding: 15px 45px;
+    background-color: #0E0B42;
+    display: block;
+}
+#header .nav > ul > li > a:hover {
+    background-color: #4139D2;
+}
+#header .nav > ul > li > ul {
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 1000;
+}
+#header .nav > ul > li > ul > li > a {
+    display: block;
+    padding: 10px 20px;
+}
+#header .nav > ul > li > ul > li > a:hover {
+    background-color: #3C31D7;
+}
+/* slider */
+#slider {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+}
+#slider .sliderWrap {
+    position: relative;
+}
+#slider .sliderWrap .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#slider .sliderWrap .slider img {
+    vertical-align: top;
+}
+#slider .sliderWrap .slider .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+}
+#slider .sliderWrap .slider .text h2 {
+    color: #fff;
+}
+#slider .sliderWrap .slider .text p {
+    color: #fff;
+}
+/* content */
+#contents {
+    width: 100%;
+    height: 200px;
+    background-color: #444;
+    display: flex;
+}
+#contents .info {
+    width: 33.333%;
+    height: 200px;
+    background-color: #59C6FD;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#contents .info h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+#contents .info h3 a.active {
+    text-decoration: underline;
+}
+#contents .info .notice li {
+    display: flex;
+}
+#contents .info .notice li a {
+    width: 75%;
+    font-size: 16px;
+    line-height: 1.8;
+}
+#contents .info .notice li a:hover {
+    text-decoration: underline;
+}
+#contents .info .notice li span {
+    width: 25%;
+    text-align: right;
+}
+#contents .info .gallery {
+    display: flex;
+}
+#contents .info .gallery li a {
+    margin-right: 17px;
+    padding-top: 3px;
+}
+.banner h3 {
+    color: #fff;
+}
+.banner {
+    width: 33.333%;
+    height: 200px;
+    background-image: url(../images/banner.jpg);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+.banner a {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    color: #fff;
+}
+.banner a:hover {
+    background-color: rgba(148, 177, 254, 0.4);
+}
+.baro {
+    width: 33.333%;
+    height: 200px;
+    background-image: url(../images/link.jpg);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+.baro h3 {
+    color: #fff;
+}
+.baro a {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    color: #fff;
+}
+.baro a:hover {
+    background-color: rgba(148, 177, 254, 0.4);
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #ccc;
+}
+#footer .footer1 {
+    width: 20%;
+    height: 100px;
+}
+#footer .footer1 h4 {
+    font-size: 30px;
+    color: #7f7f7f;
+    padding: 28px 34px;
+}
+.footer2 {
+    width: 80%;
+    height: 100px;
+}
+.menu ul {
+    padding-top: 16px;
+}
+.menu li {
+    display: inline-block;
+    border-right: 1px solid #333;
+    margin-top: 20px;
+}
+.menu li:last-child {
+    border: 0;
+}
+.menu li a {
+    padding: 10px;
+}
+.menu li a:hover {
+    text-decoration: underline;
+}
+.menu {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.copy {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+}

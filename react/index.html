@@ -145,7 +145,7 @@ const hello = <h1>hello {name}</h1>;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(hello);
 </code></pre>
-<h4 class="page-header">3. 객체와 함수를 같이 사용한 경우</h4>
+<h4 class="page-header">객체와 함수를 같이 사용한 경우</h4>
 <pre><code class="language-js">import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -154,7 +154,7 @@ function helloName(){
 };
 
 const name = {
-    nick : "webstoryboy",
+    nick : "kimdohyun",
 };
 
 const hello = <h1>Hello, {helloName()}</h1>;
@@ -192,6 +192,51 @@ export default clock
                 </div>
                 <!-- intro3 -->
 
+                <h4 id="intro3-4" class="page-header">4. 컴퍼넌트</h4>
+<pre><code class="language-js">import React from 'react'
+import ReactDOM from 'react-dom'
+
+function Hello(){
+    return &lt;h1&gt;Hello, kimdoyun&lt;/h1&gt;
+}
+const element = &lt;Hello /&gt;
+
+ReactDOM.render(element, document.getElementById("root"));
+
+export default Hello;
+</code></pre>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+
+function Welcome(props){
+    return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;
+}
+
+function App(){
+    return (
+    &lt;div&gt;
+        &lt;Welcome name = "kim" /&gt;
+        &lt;Welcome name = "kimdo" /&gt;
+        &lt;Welcome name = "kimdohyun" /&gt;
+    &lt;/div&gt;
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&lt;App /&gt;);
+</code></pre>
+                <h4 id="intro3-5" class="page-header">5. props</h4>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+
+function Hello(props){
+    return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;
+}
+const element = &lt;Hello name = "kimdohyun" /&gt;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
+</code></pre>
             </div>
 
             <!-- //col-md-3 -->
