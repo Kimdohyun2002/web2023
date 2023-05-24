@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
     <style>
-        .split span {
+        /* .split span {
             display: inline-block;
             min-width: 1vw;
             opacity: 0;
@@ -66,7 +66,140 @@
         .split span:nth-child(44) {transition-delay: 2250ms;}
         .split span:nth-child(45) {transition-delay: 2300ms;}
         .split span:nth-child(46) {transition-delay: 2350ms;}
-        .split span:nth-child(47) {transition-delay: 2400ms;}
+        .split span:nth-child(47) {transition-delay: 2400ms;} */
+
+        /* 기본 효과 */
+        /* .style1.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transition: all 0.3s ease-in-out;
+        }
+        .style1.split span.show {
+            opacity: 1;
+        }
+
+        /* 효과2 */
+        /* .style2.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px);
+            transition: all 0.3s ease-in-out;
+        }
+        .style2.split span.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 효과3 */
+        /* .style3.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) translateX(-100px) rotate(360deg);
+            transition: all 0.3s cubic-bezier(0, 0.28, 0, 1.2);
+        }
+        .style3.split span.show {
+            opacity: 1;
+            transform: translateY(0) translateX(0) rotate(0);
+        } */
+
+        /* 효과4 */
+        /* .style4.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style4.split span.show {
+            animation: wobble 0.5s 1;
+            opacity: 1;
+        }
+        /* 효과5 */
+        /* .style5.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style5.split span.show {
+            animation: jackInTheBox 0.5s 1;
+            opacity: 1;
+        }
+        /* 효과6 */
+        /* .style6.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        } */
+        /* .style6.split span.show {
+            animation: zoomOutDown 0.5s 1;
+            opacity: 1;
+        }  */
+
+        /* @keyframes wobble {
+            0%   {transform: translate3d(0, 0, 0); opacity: 0;}
+            15%  {transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
+            30%  {transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);}
+            45%  {transform: translate3d(-15%, -0, 0) rotate3d(0, 0, 1, -3deg);}
+            60%  {transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);}
+            75%  {transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);}
+            100% {transform: translate3d(0, 0, 0); opacity: 1;}
+        }
+
+        @-webkit-keyframes jackInTheBox {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(.1) rotate(30deg);
+                transform: scale(.1) rotate(30deg);
+                -webkit-transform-origin: center bottom;
+                transform-origin: center bottom
+            }
+
+            50% {
+                -webkit-transform: rotate(-10deg);
+                transform: rotate(-10deg)
+            }
+
+            70% {
+                -webkit-transform: rotate(3deg);
+                transform: rotate(3deg)
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        } */
+        /* @keyframes zoomOutDown {
+            40% {
+                opacity: 1;
+                -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+                transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+                -webkit-animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+                animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+                transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+                -webkit-transform-origin: center bottom;
+                transform-origin: center bottom;
+                -webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+                animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+            }
+        }   */
+        /* gsap */
+        .split {
+            transform-style: preserve-3d;
+        }
+        .split span {
+            display: inline-block;
+            min-width: 1vw;
+            opacity: 0;
+            transform: translate3d(-100px, 0px, -30px) scale(2) rotate(200deg);
+        }
     </style>
 </head>
 <body class="img01 bg01 Eulyoo">
@@ -93,7 +226,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">늦었다고 생각할때가 정말 너무 늦었다. 그러니 지금 당장 시작해라.</p>
+                <p class="parallax__item__desc split style1">늦었다고 생각할때가 정말 너무 늦었다. 그러니 지금 당장 시작해라.</p>
             </section>
             <!--//section1-->
 
@@ -103,7 +236,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">하루에 3시간을 걸으면 7년 후에 지구를 한바퀴 돌 수 있다.</p>
+                <p class="parallax__item__desc split style2">하루에 3시간을 걸으면 7년 후에 지구를 한바퀴 돌 수 있다.</p>
             </section>
             <!--//section2-->
 
@@ -113,7 +246,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">피할수 없으면 즐겨라</p>
+                <p class="parallax__item__desc split style3">피할수 없으면 즐겨라</p>
             </section>
             <!--//section3-->
 
@@ -123,7 +256,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">단순하게 살아라. 현대인은 쓸데없는 절차와 일 때문에 얼마나 복잡한 삶을 살아가는가?</p>
+                <p class="parallax__item__desc split style4">단순하게 살아라. 현대인은 쓸데없는 절차와 일 때문에 얼마나 복잡한 삶을 살아가는가?</p>
             </section>
             <!--//section4-->
 
@@ -133,7 +266,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">한번의 실패와 영원한 실패를 혼동하지 마라</p>
+                <p class="parallax__item__desc split style5">한번의 실패와 영원한 실패를 혼동하지 마라</p>
             </section>
             <!--//section5-->
 
@@ -143,7 +276,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라.</p>
+                <p class="parallax__item__desc split style6">평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라.</p>
             </section>
             <!--//section6-->
 
@@ -206,12 +339,43 @@
         function scroll(){
             let scrollTop = window.pageYOffset || window.scrollY
 
-            // CSS 클래스 추가
-            document.querySelectorAll(".parallax__item").forEach(item => {
-                if(scrollTop > item.offsetTop-200){
-                    item.querySelector(".split").classList.add("show");
-                }
-            });
+            // CSS 클래스 추가 (노가다 방식)
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop > item.offsetTop-200){
+            //         item.querySelector(".split").classList.add("show");
+            //     }
+            // });
+
+            // span에 show추가
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop >= item.offsetTop){
+            //         item.querySelectorAll(".split span").forEach((span, index) => {
+            //             setTimeout(() => {
+            //                 span.classList.add("show");
+            //             }, 50 * index);
+            //         });
+            //     }
+            // });
+
+            // gsap
+            const items = document.querySelectorAll(".parallax__item");
+
+            items.forEach((item, itemIndex) => {
+                    const spans = item.querySelectorAll(".split span");
+
+                    if(scrollTop >= item.offsetTop){
+                        gsap.to(spans, {
+                            duration: 0.1,
+                            opacity: 1,
+                            x: 0,
+                            y: 0,
+                            z: 0,
+                            scale: 1,
+                            rotation: 0,
+                            stagger: 0.05
+                        });
+                    }   
+                });
 
             requestAnimationFrame(scroll);
         }
