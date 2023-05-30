@@ -1,0 +1,125 @@
+// container
+.container {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    // background-color: rgba(0, 0, 0, 0.2);
+}
+
+// section
+.section {
+    padding: 120px 0;
+}
+
+// bg
+.bg-blue {
+    background-color: var(--bg_section);
+}
+
+.button-blue {
+    @include button(#4857EC, #ffffff);
+}
+.button-red {
+    @include button(#FF3344, #ffffff);
+}
+.button-green {
+    @include button(#00C183, #ffffff);
+}
+
+// icon
+.icon-bg1 {
+    @include icon(#48EC9D, url(../../images/textType01.svg));
+}
+.icon-bg2 {
+    @include icon(#E1F9D4, url(../../images/textType02.svg));
+}
+.icon-bg3 {
+    @include icon(#F6DCE0, url(../../images/textType03.svg));
+}
+.icon-bg4 {
+    @include icon(#D3D7F9, url(../../images/textType04.svg));
+}
+.icon-bg5 {
+    @include icon(#4857EC, url());
+}
+.icon-bg5 {
+    @include icon(#FF3344, url());
+}
+.icon-bg5 {
+    @include icon(#00C183, url());
+}
+
+// blind
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// ir
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+// skip
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+#skip a {
+    background: var(--color_body);
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+
+
+$interval: (
+    0: 0,
+    10: 10px,
+    20: 20px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    60: 60px,
+    70: 70px,
+    80: 80px,
+    90: 90px,
+);
+
+@each $value, $size in $interval {
+    .mb#{$value} {
+        margin-bottom: $size !important;
+    }
+}
+
+@each $value, $size in $interval {
+    .mt#{$value} {
+        margin-top: $size !important;
+    }
+}
+
+@each $value, $size in $interval {
+    .mr#{$value} {
+        margin-right: $size !important;
+    }
+}
+
+@each $value, $size in $interval {
+    .ml#{$value} {
+        margin-left: $size !important;
+    }
+}
