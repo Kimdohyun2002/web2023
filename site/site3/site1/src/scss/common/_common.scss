@@ -7,8 +7,20 @@
 }
 
 // section
+.section.center {
+    text-align: center;
+}
 .section {
     padding: 120px 0;
+    
+    > h3 {
+        font-size: 50px;
+    }
+    > p {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
 }
 
 // bg
@@ -51,7 +63,7 @@
 
 // blind
 .blind {
-    position: absolute;
+    position: absolute; 
     clip: rect(0,0,0,0);
     width: 1px;
     height: 1px;

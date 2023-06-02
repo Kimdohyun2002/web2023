@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-3 웹디자인기능사</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="modal">
+        <h2>즐거운 파티</h2>
+        <p>즐거운 파티를 즐기고 가세요!<br>레츠고 파티!!!</p>
+        <button class="btn">닫기</button>
+    </div>
+    <div id="wrap">
+        <aside id="aside">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="side">
+                <ul>
+                    <li><a href="#">MENU1</a>
+                        <ul>
+                            <li><a href="#">SUBMENU1-1</a></li>
+                            <li><a href="#">SUBMENU1-2</a></li>
+                            <li><a href="#">SUBMENU1-3</a></li>
+                            <li><a href="#">SUBMENU1-4</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">MENU2</a>
+                        <ul>
+                            <li><a href="#">SUBMENU2-1</a></li>
+                            <li><a href="#">SUBMENU2-2</a></li>
+                            <li><a href="#">SUBMENU2-3</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">MENU3</a>
+                        <ul>
+                            <li><a href="#">SUBMENU3-1</a></li>
+                            <li><a href="#">SUBMENU3-2</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">MENU4</a>
+                        <ul>
+                            <li><a href="#">SUBMENU4-1</a></li>
+                            <li><a href="#">SUBMENU4-2</a></li>
+                            <li><a href="#">SUBMENU4-2</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">MENU5</a>
+                        <ul>
+                            <li><a href="#">SUBMENU5-1</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+        </aside>
+        <div id="contents">
+            <div class="slider">
+                <div class="slider_wrap">
+                    <img src="images/slide_img1.jpg" alt="슬라이드 이미지1">
+                    <img src="images/slide_img2.jpg" alt="슬라이드 이미지2">
+                    <img src="images/slide_img3.jpg" alt="슬라이드 이미지3">
+                </div>
+                <div class="min_img">
+                    <img src="images/min_img1.jpg" alt="작은 이미지">
+                    <img src="images/min_img2.jpg" alt="작은 이미지">
+                    <img src="images/min_img3.jpg" alt="작은 이미지">
+                </div>
+            </div>
+            <div class="banner">
+                <img src="images/banner_img.jpg" alt="배너 이미지">
+                <button>Click!</button>
+            </div>
+            <div class="notice">
+                <div class="no_text">
+                    <h3><a class="notice1" href="#">공지사항</a>/<a class="notice2" href="#">갤러리</a></h3>
+                    <ul class="noticeul1">
+                        <li><a href="#">파티에 놀러오세요!</a><em>2023-06-02</em></li>
+                        <li><a href="#">파티에 놀러오세요!</a><em>2023-06-02</em></li>
+                        <li><a href="#">파티에 놀러오세요!</a><em>2023-06-02</em></li>
+                        <li><a href="#">파티에 놀러오세요!</a><em>2023-06-02</em></li>
+                    </ul>
+                    <div class="noticeul2">
+                        <div>imgbox</div>
+                        <div>imgbox</div>
+                        <div>imgbox</div>
+                        <div>imgbox</div>
+                        <div>imgbox</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="foot">
+                <div class="foot1"><a href="#">울릉도 | 동남쪽 | 뱃길 따라 | 이백리 | 외로운 섬</a></div>
+                <div class="foot2"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        document.querySelector(".notice1").addEventListener("click", () => {
+            document.querySelector(".noticeul1").style.display = "block";
+            document.querySelector(".noticeul2").style.display = "none";
+        });
+        document.querySelector(".notice2").addEventListener("click", () => {
+            document.querySelector(".noticeul1").style.display = "none";
+            document.querySelector(".noticeul2").style.display = "flex";
+        });
+    </script>
+</body>
+</html>

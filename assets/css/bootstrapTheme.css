@@ -3689,7 +3689,7 @@ input[type="submit"].btn.btn-mini {
   overflow: visible;
 }
 .navbar .brand {
-  border: 1px solid #790000;
+  border: 1.5px solid #363636;
   border-radius: 15px;
   float: left;
   display: block;
@@ -3698,7 +3698,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 5px;
   font-size: 24px;
   font-weight: 600;
-  color: #790000;
+  color: #363636;
     font-family: Abel;;
 }
 .navbar .brand:hover,
