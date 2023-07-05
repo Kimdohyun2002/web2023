@@ -26,8 +26,10 @@
 퀴즈 게임01 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect01.html  
 퀴즈 게임02 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect02.html   
 퀴즈 게임03 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect03.html   
-퀴즈 게임04 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect03.html   
-퀴즈 게임05 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect03.html   
+퀴즈 게임04 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect04.html   
+퀴즈 게임05 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect05.html   
+퀴즈 게임06 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect06.html   
+퀴즈 게임07 : https://kimdohyun2002.github.io/web2023/javascript/quiz/quizEffect07.html   
 
 # 사이트
 헤더 유형01 : https://kimdohyun2002.github.io/web2023/site/headerType/headerType01.html   
