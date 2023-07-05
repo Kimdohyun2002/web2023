@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>퀴즈 이펙트06</title>
-<<<<<<< HEAD
-=======
 
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
+
+
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
 </head>
@@ -22,17 +22,17 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
-<<<<<<< HEAD
+
             <li><a href="quizEffect05.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
-=======
+
         </ul>
     </header>
     <!-- //header -->
 
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
+
     <main id="main">
         <div class="quiz__wrap">
             <div class="quiz">
@@ -41,19 +41,19 @@
                 </div>
                 <div class="quiz__main">
                     <div class="quiz__question"></div>
-<<<<<<< HEAD
+
                     <div class="quiz__view">
                         <div class="dog__wrap">
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
                             <div class="count"></div>
-=======
+
                     <h4></h4>
                     <div class="quiz__view">
                         <div class="dog__wrap">
                             <div class="true">⭕정답⭕</div>
                             <div class="false">❌오답❌</div>
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
+
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -78,7 +78,7 @@
                     </div>
                     <div class="quiz__choice">
                         <!-- <label for="choice1">
-<<<<<<< HEAD
+
                             <input type="radio" id="choice1" name="choice" class="select" value="1">
                             <span></span>
                         </label>
@@ -92,7 +92,7 @@
                         </label>
                         <label for="choice4">
                             <input type="radio"id="choice4" name="choice" class="select" value="4">
-=======
+
                             <input type="radio" id="choice1" name="choice" value="1">
                             <span></span>
                         </label>
@@ -106,7 +106,7 @@
                         </label>
                         <label for="choice4">
                             <input type="radio" id="choice4" name="choice" value="4">
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
+
                             <span></span>
                         </label> -->
                     </div>
@@ -114,24 +114,24 @@
                         <button class="next">다음 문제</button>
                     </div>
                     <div class="quiz__desc"></div>
-<<<<<<< HEAD
-=======
+
+
                     <div class="quiz__info">??점</div>
                     <div class="quiz__check"><span>?</span>개</div>
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
+
                 </div>
             </div>
         </div>
     </main>
     <!-- //main -->
-<<<<<<< HEAD
+
     <footer id="footer">
         <a href="mailto:1346zany@gmail.com">1346zany@gmail.com</a>
-=======
+
 
     <footer id="footer">
         <a href="mailto:yds43557340@gmail.com">yds43557340@gmail.com</a>
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
+
     </footer>
     <!-- //footer -->
     
@@ -187,70 +187,34 @@
                 infoAnswer: "Arithmetic Logic Unit",
                 infoDesc: "<br>Arithmetic: 산술 / Logic: 논리 / Unit: 장치"
             }
-<<<<<<< HEAD
         ]
-
-        //선택자
-=======
-        ];
         
         // 선택자
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizMainH4 = quizWrap.querySelector(".quiz__main h4");
-        const quizTitle = quizWrap.querySelector(".quiz__title");
-<<<<<<< HEAD
+        const quizTitle = quizWrap.querySelector(".quiz__title");   //퀴즈 제목
         const quizQuestion = quizWrap.querySelector(".quiz__question")
-        const quizChoice = quizWrap.querySelector(".quiz__choice")
-=======
-        const quizChoice = quizWrap.querySelector(".quiz__choice");
-        const quizQuestion = quizWrap.querySelector(".quiz__question");
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
-        const dogWrap = quizWrap.querySelector(".dog__wrap");
-        const dogWrapCount= quizWrap.querySelector(".dog__wrap .count");
-        const quizAnswer = quizWrap.querySelector(".quiz__answer");
-        const quizNext = quizWrap.querySelector(".quiz__answer .next");
-        const quizDesc = quizWrap.querySelector(".quiz__desc");
-        const quizCheck = quizWrap.querySelector(".quiz__check span");
-<<<<<<< HEAD
-        let quizCount = 0;      //퀴즈 번호
-        let quizScore = 0;      //현재 점수
-        let quizLength = quizInfo.length;
-       //문제출력
-       const updateQuiz = (index) => {
-=======
-        
+        const quizChoice = quizWrap.querySelector(".quiz__choice"); //퀴즈 보기
+        const dogWrap = quizWrap.querySelector(".dog__wrap");       //갱얼쥐
+        const quizNext = quizWrap.querySelector(".quiz__answer .next");     //정답 확인하기 버튼
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");     //정답 확인하기 버튼
+        const quizDesc = quizWrap.querySelector(".quiz__desc");  //문제 해설
+        const quizCurrent = quizWrap.querySelector(".quiz__info");  //현재 문제 표시
+        const quizCheck = quizWrap.querySelector(".quiz__check");   //맞춘 문제 표시
+        const quizModal = quizWrap.querySelector(".modal p");   //모달창
         let quizCount = 0;
         let quizScore = 0;
-
-        // 문제 출력
+        //문제 출력
         const updateQuiz = (index) => {
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
             let typeTag = `
-                <span>${quizInfo[index].infoType}</sapn>
-                <em>${quizInfo[index].infoTime}</em>    
+                <span>${quizInfo[index].infoType}</span>
+                <em>${quizInfo[index].infoTime}</em>
             `;
             let questionTag = `
                 <em>${index+1}</em>.
-                <span>${quizInfo[index].infoQuestion}</span>
-            `;
+                <span>${quizInfo[index].infoQuestion}<span>
+            `
             let choiceTag = `
                 <label for="choice1">
-<<<<<<< HEAD
-                    <input type="radio" id="choice1" name="choice" class="select" value="1">
-                    <span>${quizInfo[index].infoChoice[0]}</span>
-                </label>
-                <label for="choice2">
-                    <input type="radio" id="choice2" name="choice" class="select" value="2">
-                    <span>${quizInfo[index].infoChoice[1]}</span>
-                </label>
-                <label for="choice3">
-                    <input type="radio"id="choice3" name="choice" class="select" value="3">
-                    <span>${quizInfo[index].infoChoice[2]}</span>
-                </label>
-                <label for="choice4">
-                    <input type="radio"id="choice4" name="choice" class="select" value="4">
-=======
                     <input type="radio" id="choice1" name="choice" value="1">
                     <span>${quizInfo[index].infoChoice[0]}</span>
                 </label>
@@ -264,136 +228,84 @@
                 </label>
                 <label for="choice4">
                     <input type="radio" id="choice4" name="choice" value="4">
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
                     <span>${quizInfo[index].infoChoice[3]}</span>
                 </label>
             `;
             let descTag = `
-                정답은 ${quizInfo[index].infoAnswer}입니다.<br>
+                정답은 "${quizInfo[index].infoAnswer}"입니다.<br>
                 ${quizInfo[index].infoDesc}
             `;
-<<<<<<< HEAD
-=======
-            let h4Tag = ` 
-                총 ${quizInfo.length - index}문제 남았습니다.
+            let currentTag = `
+                ${quizCount+1} / ${quizInfo.length}문제
             `;
-
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
+            let checkTag = `
+                정답 : ${quizScore}개
+            `;
             quizTitle.innerHTML = typeTag;
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
-<<<<<<< HEAD
-            let quizLength = quizInfo.length - quizCount;
-            dogWrapCount.innerHTML = "총" + quizLength + "문제 중" + (quizLength) + "문제 남았습니다.";
-            // 보기 선택자
+            quizCurrent.innerHTML = currentTag;
+            quizCheck.innerHTML = checkTag;
+            //보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
             const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
-            // quizChoiceSpan.forEach((span,num) => {
-            //     span.setAttribute("onclick", "choiceSelected(this)");
-            // });
             for(let i=0; i<quizChoiceSpan.length; i++){
                 quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
-                //quizChoiceInput[i].disabled = "true";
+                //속성을 부여하는 setAttribute()
             }
             //다음 버튼, 해설 숨기기
-=======
-            quizMainH4.innerHTML = h4Tag;
-            
-            
-            // 보기 선택자
-            const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
-            const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
-            
-            // forEach()
-            // quizChoiceSpan.forEach((span, num) => {
-            //     span.setAttribute("onclick", "choiceSelected(this)");
-            // });
-            
-            // for문
-            for(let i=0; i<quizChoiceSpan.length; i++){
-                quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
-                // quizChoiceInput[i].disabled = "true";
-            }
-
-            // 다음 버튼, 해설 숨기기
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
             quizAnswer.style.display = "none";
             quizDesc.style.display = "none";
-            
         };
         updateQuiz(quizCount);
-<<<<<<< HEAD
-        //객관식 선택
         function choiceSelected(answer){
-            let userAnswer = answer.textContent;                    //사용자 정답
-            let currentAnswer = quizInfo[quizCount].infoAnswer;     //문제 정답
+            let userAnswer = answer.textContent;  //사용자가 선택한 보기
+            let currentAnswer = quizInfo[quizCount].infoAnswer; //문제 정답
             if(userAnswer == currentAnswer){
-                // console.log("정답입니다.")
-                dogWrap.classList.add("like");
-                dogWrap.classList.remove("dislike");
                 quizScore++;
-                quizAnswer.style.display="block";
-                quizDesc.style.display="block"
-            } else {
-                // console.log("오답입니다.")
-                dogWrap.classList.add("dislike");
-                dogWrap.classList.remove("like");
-                quizAnswer.style.display="block";
-                quizDesc.style.display="block"
-            }
-
-            let countLast = Math.ceil((quizScore/quizInfo.length)*100);
-            let countResult = (countLast > 60) ? "합격": "불합격"
-            
-            //마지막 문제일 때
-            if(quizCount == quizInfo.length-1){
-                quizAnswer.style.display = "none";
-                dogWrapCount.innerHTML = "총" +quizScore+ "문제를 맞추었습니다. <br>점수는 " +countLast+ "입니다." + countResult + "입니다.";
-            }
-        }
-=======
-
-        // 객관식 선택
-        function choiceSelected(answer){
-            let userAnswer = answer.textContent;    // 사용자 정답
-            let currentAnswer = quizInfo[quizCount].infoAnswer;     //문제 정답
-
-            if(userAnswer == currentAnswer){
                 dogWrap.classList.add("like");
-                dogWrap.classList.remove("dislike");
-                quizScore++;
             } else {
                 dogWrap.classList.add("dislike");
-                dogWrap.classList.remove("like");
             }
-
-            // 다음 버튼, 해설 나타나기
-            quizAnswer.style.display = "block";
+            //다음 버튼, 해설 나타나기
             quizDesc.style.display = "block";
-
-            if(quizInfo.length - quizCount == 1){
-                // console.log(quizInfo.length);
-                // console.log(quizCount);
-                document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
-                quizCheck.innerHTML = quizScore;
-            }
-        };
-
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
-        // 정답 확인
+            quizAnswer.style.display = "block";
+        }
+        //정답 확인
         quizNext.addEventListener("click", () => {
             quizCount++;
-            updateQuiz(quizCount);
-<<<<<<< HEAD
             dogWrap.classList.remove("like","dislike");
+            if(quizCount == quizInfo.length){
+                quizCheck.innerHTML = `정답 : ${quizScore}개`;
+                quizAnswer.style.display = "none";
+                // alert(Math.ceil((quizScore / quizInfo.length) * 100) + "점");
+                // 모달창을 띄우는 함수
+                function showModal() {
+                    // 모달창 요소를 가져옵니다.
+                    var modal = document.getElementById("myModal");
+                    // 모달창 요소를 보이도록 설정합니다.
+                    modal.style.display = "block";
+                    // 모달창을 닫는 버튼 요소를 가져옵니다.
+                    var closeBtn = document.getElementsByClassName("close")[0];
+                    // 모달창을 닫는 이벤트를 추가합니다.
+                    closeBtn.onclick = function() {
+                        modal.style.display = "none";
+                    }
+                    let countLast = Math.ceil((quizScore / quizInfo.length) * 100)
+                    let countResult = (countLast > 60) ? "합격입니다!" : "불합격입니다ㅠㅠ"
+                    let modalTag = `
+                        총 ${quizScore}문제를 맞추셨습니다.<br>
+                        점수 : ${countLast}점<br>
+                        ${countResult}
+                    `;
+                    quizModal.innerHTML = modalTag;
+                }
+                // alert 대신 showModal 함수를 호출합니다.
+                showModal();
+            }
+            updateQuiz(quizCount);
         });
-=======
-
-            dogWrap.classList.remove("like", "dislike");
-        });
-
->>>>>>> 4a27c7afd6957a5e8766ef8022b33185c2f03175
     </script>
 </body>
 </html>

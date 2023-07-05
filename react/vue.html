@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="김도현">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>김도현 | Kimdohyun | Webpack</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap2.css" rel="stylesheet">
+    <link href="../assets/css/docs.min2.css" rel="stylesheet">
+    <link href="../assets/css/prism2.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="../assets/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../assets/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FFFFFF">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="김도현" />
+    <meta property="og:url" content="https://kshkmn0929.dothome.co.kr/" />
+    <meta property="og:image" content="http://kshkmn0929.dothome.co.kr/assets/ico/icon.jpg" />
+    <meta property="og:site_name" content="김도현" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub9.dothome.co.kr/assets/ico/icon.jpg" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">dohyun &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://qqw2.tistory.com/">Blog</a></li>
+                    <li><a href="https://github.com/Kimdohyun2002">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs1" id="content">
+        <div class="container">
+            <h1>Class v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://qqw2.tistory.com" target="_blank">qqw2.tistory.com</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2 class="page-header">yarn</h2>
+
+                <div class="bs-docs-section">
+                    <h3 id="intro1" class="page-header">yarn</h3>
+                    <p class="lead">웹팩(Webpack)은 JavaScript 애플리케이션을 위한 정적 모듈 번들러입니다.</p>
+                    <p>웹팩은 애플리케이션의 모든 모듈을 대상으로 의존성 그래프를 작성하고 이를 기반으로 번들(bundle)을 생성합니다.</p>
+                    <p>이 번들은 여러 개의 JavaScript 파일과 관련 리소스들을 하나로 묶어서 브라우저에서 로드할 수 있는 최적화된 형태로 만들어 줍니다.</p>
+                    <p>웹팩은 다양한 모듈 형식을 지원하며, 의존성 그래프를 생성하여 모듈 간의 종속성을 파악합니다. 이를 통해 필요한 모든 모듈을 찾아 하나의 번들로 묶고,</p>
+                    <p>
+                        필요에 따라 변환(transform)과 최적화(optimization)를 수행합니다. 주로 웹 애플리케이션에서 사용되지만, 웹팩을 사용하여 JavaScript를 번들링할 수 있는 다양한 환경에서 활용할 수 있습니다.
+                    </p>
+                </div>
+                <!-- intro1 -->
+
+                <div class="bs-docs-section">
+                    <h3 id="intro2" class="page-header">yarn 설치</h3>
+                    <h4 id="intro2-1" class="page-header">1.1 yarn cli 설치하기</h4>
+                    <p>
+                        뷰를 시작하기 전에 yarn cli를 설치해야 합니다.
+                    </p>
+                    <pre><code class="language-js">npm choco install yarn</code></pre>
+
+                    <h4 id="intro2-2" class="page-header">1.2 vue cli 설치</h4>
+<pre><code class="language-js">npm install -g @vue/cli</code></pre>
+
+                    <h4 id="intro2-2" class="page-header">1.3 파일 생성</h4>
+                    <p><code>vue create site-vue  </code>를 작성하면 파일이 생성됩니다.</p>
+<pre><code class="language-js">vue create site-vue  
+</code></pre>
+<p>3번째 메뉴얼 선택</p>
+
+                    <h4 id="intro2-4" class="page-header">1.4 npm run serve</h4>
+                    <p><code>npm run serve</code>을 작성하면 실행됩니다.</p>
+<pre><code class="language-js">npm run serve
+</code></pre>
+                
+                    
+                
+                <!-- intro2 -->
+
+            
+            <!-- //col-md-3 -->
+    <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li><a href="http://kshkmn0929.dothome.co.kr/">Hooooong</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+</html>
+
+<!-- memeber테이블에서 memeberID가 6번 10번 멤버 데이터 -->
+<!-- SELECT * FROM members WHERE memberID=6 OR memberID=10; -->
+<!-- memeber테이블에서 memeberID가 6번 10번 멤버 이름 -->
+<!-- SELECT youName FROM members WHERE memberID=6 OR memberID=10; -->

@@ -1,0 +1,35 @@
+//youtube__wrap
+.youtube__wrap {
+    overflow: hidden;
+}
+.youtube__inner {
+    height: 600px;
+    .youtube__text {
+        h3 {
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+        a {
+            @include border(50px)
+        }
+    }
+    .youtube__item {
+        @include flex-between;
+        position: absolute;
+        margin-top: 70px;
+        > div {
+            margin-right: 10px;
+            width: 400px;
+            @include border(20px)
+        }
+        > div > img {
+            border: 2px solid #000;
+            border-radius: 25px;
+        }
+    }
+}

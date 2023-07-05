@@ -1,0 +1,33 @@
+.movie__wrap {
+    overflow: hidden;
+}
+.movie__inner {
+    height: 1100px;
+}
+.movie__text {
+    h3 {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    p {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+    a {
+        margin: 50px 0;
+        border-radius: 50px;
+    }
+}
+.movie__item {
+    @include flex-between;
+    position: absolute;
+    margin-top: 70px;
+    > div {
+        width: 400px;
+        margin-right: 10px;
+        img {
+            width: 100%;
+        }
+    }
+}
